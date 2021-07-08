@@ -13,7 +13,7 @@ subtitle: 'Visualizing spin bike difficulty'
 summary: 'Not all magnetic resistance systems are created the same'
 authors: []
 toc: true
-lastmod: '2021-01-26T19:48:04-06:00'
+lastmod: '2021-07-08 10:40:12'
 featured: yes
 disable_codefolding: true
 image:
@@ -37,15 +37,17 @@ As I kept going along in my classes, all I could think was "What does this look 
 ```r
 ## load packages
 library(dplyr)
-library(tidyr)
+library(tidyr) 
 library(purrr)
 library(ggplot2)
+library(Cairo)
 
 ## theme and Peloton(c) red
 source("theme.R")
 pelo_red <- "#df1c2f"
 ```
 
+You can find `theme.R` in this site's [GitHub repo](https://github.com/eroten/lizroten.com/tree/main/content/post/2021-01-26-bowflex-c6-to-peloton-resistance-conversion-plots).  
 
 ## Create tibble
 
@@ -102,7 +104,7 @@ plot
 
 I was scrolling through aforementioned [r/SchwinnIC4_BowflexC6](https://www.reddit.com/r/SchwinnIC4_BowflexC6/) and found a post by another data person!  
 
-The conversion formula [u/raintower579](https://www.reddit.com/user/raintower579/) found is below  
+**2021-07-08** It seems as though the Reddit user (u/raintower579) who created the formula has drifted into spam territory. The comment they made with the formula has been deleted. See the [actual post here](https://www.reddit.com/r/SchwinnIC4_BowflexC6/comments/l7yxtt/dumb_question_what_is_the_peloton_to_ic4/). Huge thanks to Phillip for contacting me regarding this.   
 
 $$ y = 0.0171x^2 - 0.64x + 9.1429 $$   
 where `x` is the Peloton resistance and `y` is the C6 resistance.  
@@ -164,7 +166,7 @@ ggplot(data = conv_table,
   labs(title = "Peloton to Bowflex C6 resistance conversion",
        x = "Peloton",
        y = "Bowflex C6",
-       caption = "@LizRoten 2021 | Data r/pelotoncycle | Model u/raintower579") +
+       caption = "@LizRoten 2021 | Data r/pelotoncycle") +
   my_theme2
 ```
 

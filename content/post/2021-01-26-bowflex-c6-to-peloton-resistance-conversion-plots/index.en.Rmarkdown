@@ -47,9 +47,10 @@ As I kept going along in my classes, all I could think was "What does this look 
 ```{r}
 ## load packages
 library(dplyr)
-library(tidyr)
+library(tidyr) 
 library(purrr)
 library(ggplot2)
+library(Cairo)
 
 ## theme and Peloton(c) red
 source("theme.R")
@@ -112,7 +113,7 @@ ggsave(plot, filename = "featured.png")
 
 I was scrolling through aforementioned [r/SchwinnIC4_BowflexC6](https://www.reddit.com/r/SchwinnIC4_BowflexC6/) and found a post by another data person!  
 
-**2021-07-08** it seems as though the Reddit user (u/raintower579) who created the formula has drifted into spam territory. The comment they made with the formula has been deleted. See the [actual post here](https://www.reddit.com/r/SchwinnIC4_BowflexC6/comments/l7yxtt/dumb_question_what_is_the_peloton_to_ic4/). Huge thanks to Phillip for contacting me regarding this.   
+**2021-07-08** It seems as though the Reddit user (u/raintower579) who created the formula has drifted into spam territory. The comment they made with the formula has been deleted. See the [actual post here](https://www.reddit.com/r/SchwinnIC4_BowflexC6/comments/l7yxtt/dumb_question_what_is_the_peloton_to_ic4/). Huge thanks to Phillip for contacting me regarding this.   
 
 $$ y = 0.0171x^2 - 0.64x + 9.1429 $$   
 where `x` is the Peloton resistance and `y` is the C6 resistance.  
