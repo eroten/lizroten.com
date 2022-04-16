@@ -1,52 +1,78 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
-education:
-  courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
-highlight_name: true
-interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+# Display name
+title: Liz Roten
+
+# Is this the primary user of the site?
+superuser: true
+
+# Role/position/tagline
+role: Data Scientist & Cartographer
+
+# Organizations/Affiliations to show in About widget
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Metropolitan Council
+  url: https://metrocouncil.org
+
+# Short bio (displayed in user profile at end of posts)
+bio: My favorite food is eggplant. 
+
+# Interests to show in About widget
+# interests:
+# - Data visualization
+# - Interactive data storytelling 
+# - Data science for public good
+
+# Education to show in About widget
+# education:
+#   courses:
+#   - course: Bachelor of Arts in Geography, Data Science, and Community and Global Health
+#     institution: Macalester College
+#     year: 2018
+
+# Social/Academic Networking
+# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
+#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
+#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
-- display:
-    header: true
-  icon: twitter
+  link: '/#contact'
+- icon: twitter
   icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/LizRoten
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/eroten
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
-superuser: true
-title: Alice Bighetti (吳恩達)
+  link: https://www.linkedin.com/eroten
+
+# Link to a PDF of your resume/CV.
+# To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
+# and uncomment the lines below.
+- icon: cv
+  icon_pack: ai
+  link: https://raw.githubusercontent.com/eroten/cv/master/cv.pdf
+
+# Email for Contact widget or Gravatar
+email: ""
+
+# Highlight the author in author lists? (true/false)
+highlight_name: false
+
+# Organizational groups that you belong to (for People widget)
+#   Remove this if you are not using the People widget.
+# user_groups:
+# - Principal Investigators
+# {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+
 ---
 
-Alice Bighetti is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a highly motivated data scientist and cartographer with a passion for data visualization. I make complex topics easy to understand using compelling visual design. My static and interactive visualizations are attractive and powerful tools for decision making.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Behind the plots and maps, I’ve successfully built organization-specific R packages for processing gigabytes of information quickly, managing consistent visual identity across products, and standardizing data cleaning practices.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} View and download my {{< staticref "cv/cv.html" "newtab" >}}CV{{< /staticref >}}.
+
+
+

@@ -4,9 +4,9 @@ theme: "starter-hugo-academic"
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Academic # Website name
-baseurl: 'https://academic-demo.netlify.app/' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+title: Liz Roten # Website name
+baseurl: 'https://lizroten.com/' # Website URL
+copyright: "&copy; Liz Roten {year}"
 
 ############################
 ## LANGUAGE
@@ -30,7 +30,7 @@ module:
 ## ADVANCED
 ############################
 
-enableGitInfo: false
+enableGitInfo: true
 summaryLength: 30
 paginate: 10
 enableEmoji: true
@@ -47,11 +47,15 @@ disableAliases: true
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
+
+
 imaging:
   resampleFilter: lanczos
   quality: 75
   anchor: smart
 timeout: 600000
+
+
 taxonomies:
   tag: tags
   category: categories
