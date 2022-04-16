@@ -5,55 +5,43 @@
 
 # Appearance
 
-theme: minimal
-day_night: true
-font: ''
-font_size: L
+theme: Liz
+day_night: false
+font: 'Liz'
+font_size: M
 
 # SEO
 
 site_type: Person
 local_business_type: ''
 org_name: ''
-description: ''
+description: 'Liz Roten'
 twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: test@example.org
-phone: 888 888 88 88
-address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
-  country_code: US
-coordinates:
-  latitude: '37.4275'
-  longitude: '-122.1697'
-directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-office_hours:
-  - 'Monday 10:00 to 13:00'
-  - 'Wednesday 09:00 to 10:00'
-appointment_url: 'https://calendly.com'
+# email: roten.elizabeth@gmail.com
+# phone: 888 888 88 88
+# address:
+#   street: 450 Serra Mall
+#   city: Stanford
+#   region: CA
+#   postcode: '94305'
+#   country: United States
+#   country_code: US
+# coordinates:
+#   latitude: '37.4275'
+#   longitude: '-122.1697'
+# directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+# office_hours:
+#   - 'Monday 10:00 to 13:00'
+#   - 'Wednesday 09:00 to 10:00'
+# appointment_url: 'https://calendly.com'
 contact_links:
   - icon: twitter
     icon_pack: fab
     name: DM Me
-    link: 'https://twitter.com/Twitter'
-  - icon: skype
-    icon_pack: fab
-    name: Skype Me
-    link: 'skype:echo123?call'
-  - icon: keybase
-    icon_pack: fab
-    name: Chat on Keybase
-    link: 'https://keybase.io/'
-  - icon: comments
-    icon_pack: fas
-    name: Discuss on Forum
-    link: 'https://discourse.gohugo.io'
+    link: 'https://twitter.com/LizRoten'
 
 # Site header
 
@@ -68,7 +56,7 @@ main_menu:
 
 # Localization
 
-date_format: 'Jan 2, 2006'
+date_format: '2006-01-06'
 time_format: '3:04 PM'
 address_format: en-us
 
@@ -79,8 +67,11 @@ highlight_languages:
   - r
   - python
   - latex
-math: false
-diagram: false
+  - css
+  - javascript
+  - markdown
+math: true
+diagram: true
 privacy_pack: false
 edit_page:
   repo_url: ''
@@ -91,7 +82,7 @@ edit_page:
     post: false
     book: false
 show_related:
-  book: true
+  book: false
   page: false
   post: true
   project: true
@@ -136,7 +127,7 @@ comments:
   commento:
     url: ''
 search:
-  provider: wowchemy
+  provider: algolia
   algolia:
     app_id: ''
     api_key: ''
@@ -147,14 +138,14 @@ map:
   api_key: ''
   zoom: 15
 marketing:
-  google_analytics: ''
+  google_analytics: 'G-93N4169W7Q'
   google_tag_manager: ''
   google_site_verification: ''
   baidu_site_verification: ''
   baidu_tongji: ''
 cms:
-  branch: master
+  branch: main
   local_backend: false
 icon:
   pack:
-    ai: false
+    ai: true
