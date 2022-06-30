@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog | Liz Roten</title>
+    <link>https://lizroten.com/tag/blog/</link>
+      <atom:link href="https://lizroten.com/tag/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Tue, 23 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>blog</title>
+      <link>https://lizroten.com/tag/blog/</link>
+    </image>
+    
+    <item>
+      <title>How eMoods Aided My Recovery And Inspired My Data Science Career</title>
+      <link>https://lizroten.com/project/emoods-blog-post/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/emoods-blog-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

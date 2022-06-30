@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rtistry | Liz Roten</title>
+    <link>https://lizroten.com/tag/rtistry/</link>
+      <atom:link href="https://lizroten.com/tag/rtistry/index.xml" rel="self" type="application/rss+xml" />
+    <description>rtistry</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Fri, 02 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>rtistry</title>
+      <link>https://lizroten.com/tag/rtistry/</link>
+    </image>
+    
+    <item>
+      <title>Radial rtistry</title>
+      <link>https://lizroten.com/post/rtistry-with-contour/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/post/rtistry-with-contour/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been obsessed with &lt;a href=&#34;https://twitter.com/ijeamaka_a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ijeamaka Anyene&amp;rsquo;s&lt;/a&gt; art for months now. Her &lt;a href=&#34;https://ijeamaka-anyene.netlify.app/posts/2021-01-04-radial-patterns-in-ggplot2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zine&lt;/a&gt; is gorgeous, and I&amp;rsquo;ve been antsy to try some of the techniques out.&lt;/p&gt;
+&lt;h2 id=&#34;spokes-pattern-01-variants&#34;&gt;Spokes: Pattern 01 Variants&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# setup 
+library(tidyverse)
+library(colorspace)
+set.seed(246153)
+
+library(showtext)
+showtext_auto()
+file &amp;lt;- sysfonts::font_files()
+
+font_add(&amp;quot;Nunito Light&amp;quot;, &amp;quot;Nunito-Light.ttf&amp;quot;)
+font_add(&amp;quot;Cormorant Garamond&amp;quot;, &amp;quot;CormorantGaramond-Regular.ttf&amp;quot;)
+
+my_caption &amp;lt;- &amp;quot;Liz Roten | @LizRoten&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See original &lt;a href=&#34;https://ijeamakaanyene.github.io/patterns/zine/zine_radial_patterns.html#4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lines &amp;lt;- tibble(
+  x = seq(0, 29, by = 0.2),
+  xend = rep(0,146),
+  y = runif(146, min = 5, max = 9),
+  yend = rep(0,146),
+  speed = 3
+)
+
+
+ggplot() +
+  geom_segment(data = lines,
+               aes(x = x,
+                   y = y,
+                   xend = xend,
+                   yend = yend),
+               color = &amp;quot;white&amp;quot;,
+               alpha = 0.5) +
+  geom_point(data = lines, 
+             aes(x = x,
+                 y = y),
+             color = &amp;quot;white&amp;quot;) +
+  coord_polar() +
+  scale_x_continuous(limits = c(0, 29)) +
+  # scale_y_continuous(limits = c(-1, 10)) +
+  labs(caption = my_caption) +
+  theme_void() +
+  theme(plot.background = element_rect(fill = &amp;quot;#14342B&amp;quot;,
+                                       color = NA),
+        panel.background = element_rect(fill = &amp;quot;#14342B&amp;quot;,
+                                        color = NA),
+        plot.caption = element_text(family = &amp;quot;Nunito Light&amp;quot;,
+                                    color = &amp;quot;white&amp;quot;,
+                                    size = 12),
+        plot.margin = unit(c(.5, .5, .2, .5), &amp;quot;cm&amp;quot;)
+  )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/rtistry-with-contour/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;spokes-pattern-10-variants&#34;&gt;Spokes: Pattern 10 Variants&lt;/h2&gt;
+&lt;p&gt;See original &lt;a href=&#34;https://ijeamakaanyene.github.io/patterns/zine/zine_radial_patterns.html#6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;increment = .05
+
+circle_1 = tibble(
+  x = seq(from = 0, to = 5, by = increment),
+  xend = seq(from = 0, to = 5, by = increment),
+  y = 0, 
+  yend = 1.4,
+  type = LETTERS[1])
+
+circle_2 = tibble(
+  x = seq(from = 0, to = 5, by = increment  + increment),
+  xend = seq(from = 0, to = 5, by = increment + increment),
+  y = 1.5,
+  yend = 2.9,
+  type = LETTERS[2])
+
+circle_3 = tibble(
+  x = seq(from = 0, to = 5, by = increment ),
+  xend = seq(from = 0, to = 5, by = increment  ),
+  y = 3,
+  yend = 4.5,
+  type = LETTERS[3])
+
+palette_values = c(&amp;quot;#94524A&amp;quot;, &amp;quot;#8d667e&amp;quot;, &amp;quot;#39355c&amp;quot;)
+
+
+bind_rows(circle_1, circle_2, circle_3) %&amp;gt;%
+  ggplot(.) + 
+  geom_segment(aes(x = x, 
+                   y = y,
+                   xend = xend, 
+                   yend = yend,
+                   color = type),
+               show.legend = F) +
+  scale_color_manual(values = palette_values) +
+  labs(caption = my_caption) +
+  coord_polar() +
+  theme_void() +
+    theme(
+      # plot.background = element_rect(fill = &amp;quot;#565254&amp;quot;,
+      #                                  color = NA,
+      #                                  size = 0),
+      #   panel.background = element_rect(fill = &amp;quot;#565254&amp;quot;,
+      #                                   color = NA,
+      #                                   size = 0),
+        plot.caption = element_text(family = &amp;quot;Nunito Light&amp;quot;,
+                                    color = &amp;quot;black&amp;quot;,
+                                    hjust = 1,
+                                    size = 14),
+        plot.caption.position = &amp;quot;plot&amp;quot;,
+        plot.margin = unit(c(.5, .5, .5, .5), &amp;quot;cm&amp;quot;)
+  )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/rtistry-with-contour/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;increment = .05
+
+circle_1 = tibble(
+  x = seq(from = 0, to = 5, by = increment),
+  xend = seq(from = 0, to = 5, by = increment),
+  y = 0, 
+  yend = 1.5,
+  type = LETTERS[1])
+
+circle_2 = tibble(
+  x = seq(from = 0, to = 5, by = increment),
+  xend = seq(from = 0, to = 5, by = increment),
+  y = 1.5,
+  yend = 3,
+  type = LETTERS[2])
+
+circle_3 = tibble(
+  x = seq(from = 0, to = 5, by = increment ),
+  xend = seq(from = 0, to = 5, by = increment  ),
+  y = 3,
+  yend = 4.5,
+  type = LETTERS[3])
+
+palette_values = c(&amp;quot;#7A443E&amp;quot;,
+                   colorspace::lighten(&amp;quot;#7A443E&amp;quot;, 0.5),
+                   colorspace::lighten(&amp;quot;#7A443E&amp;quot;, 0.8))
+
+bind_rows(circle_1, circle_2, circle_3) %&amp;gt;%
+  ggplot(.) + 
+  geom_segment(aes(x = x, 
+                   y = y,
+                   xend = xend, 
+                   yend = yend,
+                   color = type),
+               show.legend = F) +
+  scale_color_manual(values = palette_values) +
+  labs(caption = my_caption) +
+  coord_polar() +
+  theme_void() +
+    theme(
+        plot.caption = element_text(family = &amp;quot;Nunito Light&amp;quot;,
+                                    color = &amp;quot;black&amp;quot;,
+                                    hjust = 1,
+                                    size = 14),
+        plot.caption.position = &amp;quot;plot&amp;quot;,
+        plot.margin = unit(c(.5, .5, .5, .5), &amp;quot;cm&amp;quot;)
+  )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/rtistry-with-contour/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;florals&#34;&gt;Florals&lt;/h2&gt;
+&lt;p&gt;I fell in love with the opening slide in Ijeamaka Anyene&amp;rsquo;s talk at &lt;a href=&#34;https://github.com/Ijeamakaanyene/aRt_ggplot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RLadies Johannesburg&lt;/a&gt;, so I wanted to give it a try!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(246153)
+
+burst &amp;lt;- tibble(
+  x = seq(0, 10, by = 0.3),
+  xend = seq(0,10, by = 0.3),
+  y =  0,
+  yend = 0.4,
+  yend_jitt = jitter(yend, 2.6),
+  yend_jitt_point = yend_jitt
+  
+)
+
+
+plot_burst &amp;lt;- ggplot() +
+  geom_segment(data = burst,
+               aes(x = x,
+                   y = y,
+                   xend = xend,
+                   yend = yend_jitt),
+               color = &amp;quot;#F4AC32&amp;quot;,
+               lwd = 0.5) +
+  geom_point(data = burst, 
+             aes(x = x,
+                 y = yend_jitt),
+             color = &amp;quot;#F4AC32&amp;quot;,
+             size = 1.5
+  ) +
+  coord_polar() +
+  theme_void()
+
+bursts &amp;lt;- quote(expr = {cowplot::draw_plot(plot_burst,
+                                           scale = runif(1, min = 1.2, max = 3),
+                                           x = runif(1, min = 0, max = 10),
+                                           y = runif(1, min = 0, max = 5))})
+
+
+plot_all &amp;lt;- cowplot::ggdraw(xlim = c(0,12),
+                            ylim = c(0,6)) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  eval(bursts) +
+  labs(caption = my_caption) +
+  theme(plot.background = element_rect(fill = &amp;quot;#565254&amp;quot;,
+                                       color = NA,
+                                       size = 0),
+        panel.background = element_rect(fill = &amp;quot;#565254&amp;quot;,
+                                        color = NA,
+                                        size = 0),
+        plot.caption = element_text(family = &amp;quot;Nunito Light&amp;quot;,
+                                    color = &amp;quot;white&amp;quot;,
+                                    hjust = 1,
+                                    size = 14),
+        plot.caption.position = &amp;quot;plot&amp;quot;,
+        plot.margin = unit(c(.5, .5, .5, .5), &amp;quot;cm&amp;quot;)
+  )
+
+plot_all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/rtistry-with-contour/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;h2 id=&#34;see-also&#34;&gt;See also&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ijeamaka Anyene&amp;rsquo;s fantastic &lt;a href=&#34;https://ijeamaka-anyene.netlify.app/posts/2021-01-04-radial-patterns-in-ggplot2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Colors via &lt;a href=&#34;https://coolors.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://coolors.co/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

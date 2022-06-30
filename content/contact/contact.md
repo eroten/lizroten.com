@@ -3,28 +3,28 @@
 # Documentation: https://sourcethemes.com/academic/docs/page-builder/
 widget: contact
 
+# Activate this widget? true/false
+active: true
+
 # This file represents a page section.
-headless: true
+headless: false
 
 # Order that this section appears on the page.
 weight: 130
 
 title: Contact
-subtitle:
+subtitle: Send me a note
 
-content:
-  # Automatically link email and phone or display as text?
-  autolink: true
-  
-  # Email form provider
-  form:
-    provider: formspree
-    formspree:
-      id: test
-    netlify:
-      # Enable CAPTCHA challenge to reduce spam?
-      captcha: false
-  
-design:
-  columns: '2'
+# Automatically link email and phone or display as text?
+autolink: true
+
+# Email form provider
+#   0: Disable email form
+#   1: Netlify (requires that the site is hosted by Netlify)
+#   2: formspree.io
+email_form: 1
+
+netlify:
+  # Enable CAPTCHA challenge to reduce spam?
+  captcha: true
 ---

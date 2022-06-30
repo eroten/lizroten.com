@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spatial conflation | Liz Roten</title>
+    <link>https://lizroten.com/tag/spatial-conflation/</link>
+      <atom:link href="https://lizroten.com/tag/spatial-conflation/index.xml" rel="self" type="application/rss+xml" />
+    <description>spatial conflation</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>spatial conflation</title>
+      <link>https://lizroten.com/tag/spatial-conflation/</link>
+    </image>
+    
+    <item>
+      <title>Regional Truck Corridor Study</title>
+      <link>https://lizroten.com/project/truck-corridor-study/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/truck-corridor-study/</guid>
+      <description>&lt;p&gt;The study update process began in 2021 with a few goals.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Migrate existing calculations and documentation scattered in Excel workbooks, ArcGIS documents, and PDFs to reproducible R code and RMarkdown documents, complete with version control and testing.&lt;/li&gt;
+&lt;li&gt;Re-score existing corridors using most recent available data.&lt;/li&gt;
+&lt;li&gt;Evaluate new truck corridors and freight facilities as submitted by agency partners.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Throughout the process, I carefully balanced preserving the original methodology and accounting for each data source&amp;rsquo;s quirks.&lt;/p&gt;
+&lt;p&gt;Some data used in the original study were unavailable. Working with our transportation planners, I developed a method for estimating truck volume and truck percentage of total traffic using &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight Data&lt;/a&gt;. I then carefully integrated the data sources and patched missing data to complete the project. Finally, I completed an comprehensive project wrap-up, tracking down emails, chat messages, and meeting notes to compile a definitive &amp;ldquo;how&amp;rdquo; and &amp;ldquo;why&amp;rdquo; for each data source and analysis method. I used &lt;a href=&#34;https://groundhogr.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;{groundhog}&lt;/code&gt;&lt;/a&gt; to preserve package versions and implemented a clever script naming convention to organize files. Documentation is a love letter to your future self - and I went all out.&lt;/p&gt;
+&lt;h2 id=&#34;interactive&#34;&gt;Interactive&lt;/h2&gt;
+&lt;p&gt;I decided to build the visualization using Tableau because I wanted to take advantage of Tableau&amp;rsquo;s dynamic tooltips, in which you can insert a mini plot. The interaction between elements, such as a map and a table, is more streamlined. Tableau can also turn out a snazzy visualization relatively quickly.&lt;/p&gt;
+&lt;h3 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-truck-corridor-study&#34; href=&#34;https://lizroten.com/media/albums/truck-corridor-study/corridor_179.PNG&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/truck-corridor-study/corridor_179_huf9c119ed56b43bc7835bd6044b532550_269136_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;corridor_179.PNG&#34; width=&#34;235&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-truck-corridor-study&#34; href=&#34;https://lizroten.com/media/albums/truck-corridor-study/corridor_232.PNG&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/truck-corridor-study/corridor_232_hu7da22254c19e816a38c61d784322e9cf_264088_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;corridor_232.PNG&#34; width=&#34;238&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-truck-corridor-study&#34; href=&#34;https://lizroten.com/media/albums/truck-corridor-study/freight_facilities.PNG&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/truck-corridor-study/freight_facilities_hudeec7288ccc83c37c9d14e22eec82795_383450_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;freight_facilities.PNG&#34; width=&#34;239&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Regional truck freight corridors were initially developed through the 2017 Regional Truck Highway Corridors Study. A technical advisory work group of public agency staff most directly engaged in highway planning guided this data-driven study that analyzed the region’s principal and minor arterials. Ultimately the study applied four data factors to establish corridor score rankings and to group the corridors into tiers 1, 2, and 3, in order of priority.&lt;/p&gt;
+&lt;p&gt;In 2018 the Met Council adopted the study’s final regional truck corridors into the Transportation Policy Plan and first applied the tiered corridors as project selection criteria in the Regional Solicitation process for distributing federal transportation funds. The corridors have also been used as qualifying criteria in recent funding cycles of MnDOT’s Minnesota Highway Freight Program.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

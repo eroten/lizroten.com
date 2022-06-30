@@ -37,8 +37,8 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -53,7 +53,7 @@
   
   
 
-  <meta name="author" content="Alice Bighetti (吳恩達)" />
+  <meta name="author" content="Liz Roten" />
 
   
   
@@ -63,15 +63,18 @@
   <meta name="description" content="Learn how to blog in Academic using Jupyter notebooks" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/post/jupyter/" />
+  <link rel="alternate" hreflang="en-us" href="https://lizroten.com/post/jupyter/" />
 
   
   
   
-    <meta name="theme-color" content="#1565c0" />
+    <meta name="theme-color" content="#19535F" />
   
 
   
+  
+    
+    <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -82,6 +85,8 @@
   
   
     
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -116,6 +121,8 @@
     
 
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+    
 
     
     
@@ -220,9 +227,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -248,10 +255,49 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+  <link rel="stylesheet" href="/css/wowchemy.9be36f46c2c8a9210fc378e8d31817d4.css" />
 
   
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93N4169W7Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-93N4169W7Q', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
   
@@ -273,10 +319,10 @@
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/post/jupyter/" />
+  <link rel="canonical" href="https://lizroten.com/post/jupyter/" />
 
   
   
@@ -297,11 +343,11 @@
   
   <meta property="twitter:card" content="summary_large_image" />
   
-  <meta property="og:site_name" content="Academic" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/post/jupyter/" />
-  <meta property="og:title" content="Display Jupyter Notebooks with Academic | Academic" />
-  <meta property="og:description" content="Learn how to blog in Academic using Jupyter notebooks" /><meta property="og:image" content="https://academic-demo.netlify.app/post/jupyter/featured.png" />
-    <meta property="twitter:image" content="https://academic-demo.netlify.app/post/jupyter/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:site_name" content="Liz Roten" />
+  <meta property="og:url" content="https://lizroten.com/post/jupyter/" />
+  <meta property="og:title" content="Display Jupyter Notebooks with Academic | Liz Roten" />
+  <meta property="og:description" content="Learn how to blog in Academic using Jupyter notebooks" /><meta property="og:image" content="https://lizroten.com/post/jupyter/featured.png" />
+    <meta property="twitter:image" content="https://lizroten.com/post/jupyter/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -309,7 +355,7 @@
         content="2019-02-05T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2019-09-05T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-04-16T13:55:58-05:00">
   
 
   
@@ -333,28 +379,28 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://academic-demo.netlify.app/post/jupyter/"
+    "@id": "https://lizroten.com/post/jupyter/"
   },
   "headline": "Display Jupyter Notebooks with Academic",
   
   "image": [
-    "https://academic-demo.netlify.app/post/jupyter/featured.png"
+    "https://lizroten.com/post/jupyter/featured.png"
   ],
   
   "datePublished": "2019-02-05T00:00:00Z",
-  "dateModified": "2019-09-05T00:00:00Z",
+  "dateModified": "2022-04-16T13:55:58-05:00",
   
   "author": {
     "@type": "Person",
-    "name": "Alice Bighetti (吳恩達)"
+    "name": "Liz Roten"
   },
   
   "publisher": {
     "@type": "Organization",
-    "name": "Academic",
+    "name": "Liz Roten",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+      "url": "https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "Learn how to blog in Academic using Jupyter notebooks"
@@ -373,7 +419,7 @@
 
 
 
-  <title>Display Jupyter Notebooks with Academic | Academic</title>
+  <title>Display Jupyter Notebooks with Academic | Liz Roten</title>
 </head>
 
 
@@ -388,7 +434,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.13d3c1ccc66961c64e937f4e854fdd1e.js"></script>
+  <script src="/js/wowchemy-init.min.8d94c24f7f2845bf1dd16584caebe8cc.js"></script>
 
   
 
@@ -408,9 +454,7 @@
 
       <div id="search-box">
         
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
-        aria-label="Search...">
+        
         
       </div>
 
@@ -452,7 +496,7 @@
 
       
       <div class="d-none d-lg-inline-flex">
-        <a class="navbar-brand" href="/">Academic</a>
+        <a class="navbar-brand" href="/">Liz Roten</a>
       </div>
       
 
@@ -465,7 +509,7 @@
 
       
       <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-        <a class="navbar-brand" href="/">Academic</a>
+        <a class="navbar-brand" href="/">Liz Roten</a>
       </div>
       
 
@@ -482,8 +526,6 @@
           
           
           
-            
-          
 
           
 
@@ -494,21 +536,11 @@
 
           
             
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
             
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#about"><span>Demo</span></a>
+            <a class="nav-link " href="/#"><span>Home</span></a>
           </li>
 
           
@@ -519,8 +551,6 @@
           
           
           
-            
-          
 
           
 
@@ -534,129 +564,11 @@
               
               
             
-            
-              
-              
-              
-                
-              
-              
             
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#posts"><span>Posts</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#projects"><span>Projects</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#talks"><span>Talks</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+            <a class="nav-link  active" href="/post"><span>Blog</span></a>
           </li>
 
           
@@ -686,7 +598,35 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/courses/"><span>Courses</span></a>
+            <a class="nav-link " href="/projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/talk"><span>Talks</span></a>
           </li>
 
           
@@ -713,17 +653,10 @@
               
             
             
-              
-              
-              
-                
-              
-              
-            
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+            <a class="nav-link " href="/contact"><span>Contact</span></a>
           </li>
 
           
@@ -740,13 +673,6 @@
         
         
           
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://twitter.com/GeorgeCushen" data-toggle="tooltip" data-placement="bottom" title="Follow me on Twitter" target="_blank" rel="noopener" aria-label="Follow me on Twitter">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-          
         
 
         
@@ -757,23 +683,6 @@
         
 
         
-        
-        <li class="nav-item dropdown theme-dropdown">
-          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-            <i class="fas fa-moon" aria-hidden="true"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-item js-set-theme-light">
-              <span>Light</span>
-            </a>
-            <a href="#" class="dropdown-item js-set-theme-dark">
-              <span>Dark</span>
-            </a>
-            <a href="#" class="dropdown-item js-set-theme-auto">
-              <span>Automatic</span>
-            </a>
-          </div>
-        </li>
         
 
         
@@ -836,8 +745,8 @@
   <div>
     
 
-  <span class="author-highlighted">
-      <a href="/author/alice-bighetti-%E5%90%B3%E6%81%A9%E9%81%94/">Alice Bighetti (吳恩達)</a></span>
+  <span >
+      <a href="/author/liz-roten/">Liz Roten</a></span>
   </div>
   
   
@@ -850,7 +759,7 @@
           Last updated on
       
     
-    Sep 5, 2019
+    2022-04-22
   </span>
   
 
@@ -975,7 +884,7 @@ date: 2019-09-01
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/post/jupyter/&amp;text=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://lizroten.com/post/jupyter/&amp;text=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -988,7 +897,7 @@ date: 2019-09-01
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/post/jupyter/&amp;t=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://lizroten.com/post/jupyter/&amp;t=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1001,7 +910,7 @@ date: 2019-09-01
       
       
       <li>
-        <a href="mailto:?subject=Display%20Jupyter%20Notebooks%20with%20Academic&amp;body=https://academic-demo.netlify.app/post/jupyter/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Display%20Jupyter%20Notebooks%20with%20Academic&amp;body=https://lizroten.com/post/jupyter/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1014,34 +923,8 @@ date: 2019-09-01
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/post/jupyter/&amp;title=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https://lizroten.com/post/jupyter/&amp;title=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=Display%20Jupyter%20Notebooks%20with%20Academic%20https://academic-demo.netlify.app/post/jupyter/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/post/jupyter/&amp;title=Display%20Jupyter%20Notebooks%20with%20Academic" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
-          <i class="fab fa-weibo"></i>
         </a>
       </li>
     
@@ -1074,13 +957,13 @@ date: 2019-09-01
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/alice-bighetti-%E5%90%B3%E6%81%A9%E9%81%94/avatar_hu3c64bd0f98018e2d901b7c60447ac42e_1387900_270x270_fill_q75_lanczos_center.jpg" alt="Alice Bighetti (吳恩達)"></a>
+      <a href="https://lizroten.com/"><img class="avatar mr-3 avatar-circle" src="/author/liz-roten/avatar_huf68b575c4c99e0c923dd46889fc37e3e_342912_270x270_fill_q75_lanczos_center.jpg" alt="Liz Roten"></a>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Alice Bighetti (吳恩達)</a></h5>
-      <h6 class="card-subtitle">Professor of Artificial Intelligence</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <h5 class="card-title"><a href="https://lizroten.com/">Liz Roten</a></h5>
+      <h6 class="card-subtitle">Data Scientist &amp; Cartographer</h6>
+      <p class="card-text">My favorite food is eggplant.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -1112,7 +995,7 @@ date: 2019-09-01
       
     
     <li>
-      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+      <a href="https://twitter.com/LizRoten" target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
@@ -1129,24 +1012,7 @@ date: 2019-09-01
       
     
     <li>
-      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/gcushen" target="_blank" rel="noopener">
+      <a href="https://github.com/eroten" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
     </li>
@@ -1163,8 +1029,23 @@ date: 2019-09-01
       
     
     <li>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/eroten" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://raw.githubusercontent.com/eroten/cv/master/cv.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
       </a>
     </li>
   
@@ -1214,6 +1095,10 @@ date: 2019-09-01
 
   
 
+  
+  <p class="powered-by">
+    © Liz Roten 2022
+  </p>
   
 
   
@@ -1287,6 +1172,8 @@ date: 2019-09-01
       
 
       
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
 
       
         
@@ -1298,6 +1185,12 @@ date: 2019-09-01
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
         
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/css.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/javascript.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/markdown.min.js" crossorigin="anonymous"></script>
         
       
 
@@ -1316,33 +1209,33 @@ date: 2019-09-01
     
     
       
-      <script id="search-hit-fuse-template" type="text/x-template">
-        <div class="search-hit" id="summary-{{key}}">
+      <script id="search-hit-algolia-template" type="text/html">
+        <div class="search-hit">
           <div class="search-hit-content">
             <div class="search-hit-name">
-              <a href="{{relpermalink}}">{{title}}</a>
-              <div class="article-metadata search-hit-type">{{type}}</div>
-              <p class="search-hit-description">{{snippet}}</p>
+              <a href="{{relpermalink}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
             </div>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{#helpers.highlight}}{ "attribute": "summary" }{{/helpers.highlight}}</p>
           </div>
         </div>
       </script>
       
-        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js" crossorigin="anonymous"></script>
+      
       
     
 
-    
-    
-
-    
-    
     
     
 
     
     
+    
+    
+
+    
+    
       
       
       
@@ -1352,6 +1245,8 @@ date: 2019-09-01
       
     
 
+    
+    <script src="/en/js/algolia-search-built.min.5faccf136cd55ac5da8926ebf5ed89df.js" type="module"></script>
     
 
     
@@ -1369,11 +1264,8 @@ date: 2019-09-01
     
     
     
-      
-      
     
-    
-    <script src="/en/js/wowchemy.min.63639926e24ecfb8040ea052c1077969.js"></script>
+    <script src="/en/js/wowchemy.min.9e0c1c9ce03b87dc836c88c80c5864ce.js"></script>
 
     
   <script async defer src="https://buttons.github.io/buttons.js"></script>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conference | Liz Roten</title>
+    <link>https://lizroten.com/tag/conference/</link>
+      <atom:link href="https://lizroten.com/tag/conference/index.xml" rel="self" type="application/rss+xml" />
+    <description>Conference</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>Conference</title>
+      <link>https://lizroten.com/tag/conference/</link>
+    </image>
+    
+    <item>
+      <title>Monitoring public adherence to social distancing guidelines with traffic data</title>
+      <link>https://lizroten.com/talk/ampo-covid-traffic/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/ampo-covid-traffic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using location-based services data for calculating the transportation greenhouse gas emissions of communities in Minnesota&#39;s Metropolitan Region</title>
+      <link>https://lizroten.com/talk/ampo-streetlight-ghg/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/ampo-streetlight-ghg/</guid>
+      <description>&lt;h2 id=&#34;conferences&#34;&gt;Conferences&lt;/h2&gt;
+&lt;p&gt;We&amp;rsquo;ve had the pleasure of presenting this project at multiple conferences. See the list below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ampo.org/events/2020-ampo-annual-conference/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AMPO 2020 (October 2020)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ccaps.umn.edu/mn-transportation-conference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Minnesota&amp;rsquo;s Transportation Conference (March 2021)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>peloton | Liz Roten</title>
+    <link>https://lizroten.com/tag/peloton/</link>
+      <atom:link href="https://lizroten.com/tag/peloton/index.xml" rel="self" type="application/rss+xml" />
+    <description>peloton</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>peloton</title>
+      <link>https://lizroten.com/tag/peloton/</link>
+    </image>
+    
+    <item>
+      <title>Converting Peloton resistance to Bowflex C6 resistance</title>
+      <link>https://lizroten.com/post/bowflex-c6-to-peloton-resistance-conversion-plots/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/post/bowflex-c6-to-peloton-resistance-conversion-plots/</guid>
+      <description>&lt;p&gt;Around the holidays, my partner and I decided to bring a stationary exercise bike into our home. After many pros and cons lists, we opted for the &lt;a href=&#34;https://www.bowflex.com/bikes/c6/100894.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bowflex C6&lt;/a&gt;. I decided to try out this whole &lt;a href=&#34;https://www.onepeloton.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peloton&lt;/a&gt; thing, and quickly found that the resistance adjustments are not equivalent between the Peloton bike and the C6. Thankfully, there is a wonderful &lt;a href=&#34;https://www.reddit.com/r/SchwinnIC4_BowflexC6/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subreddit&lt;/a&gt; just for this model! The folks there directed me to this &lt;a href=&#34;https://www.reddit.com/r/pelotoncycle/wiki/index/resistancechart&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;conversion chart&lt;/a&gt;, which then led me to a &lt;a href=&#34;https://www.etsy.com/listing/940670883/schwinn-ic4-exercise-bike-resistance?ref=hp_opfy-3&amp;amp;frs=1&amp;amp;bes=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3D-printed plate&lt;/a&gt; to keep on my handlebars.&lt;/p&gt;
+&lt;p&gt;As I kept going along in my classes, all I could think was &amp;ldquo;What does this look like on a plot? What is the distribution?&amp;rdquo; Here is the result.&lt;/p&gt;
+&lt;h2 id=&#34;load-packages&#34;&gt;Load packages&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## load packages
+library(dplyr)
+library(tidyr) 
+library(purrr)
+library(ggplot2)
+library(Cairo)
+
+## theme and Peloton(c) red
+source(&amp;quot;theme.R&amp;quot;)
+pelo_red &amp;lt;- &amp;quot;#df1c2f&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can find &lt;code&gt;theme.R&lt;/code&gt; in this site&amp;rsquo;s &lt;a href=&#34;https://github.com/eroten/lizroten.com/tree/main/content/post/2021-01-26-bowflex-c6-to-peloton-resistance-conversion-plots&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-tibble&#34;&gt;Create tibble&lt;/h2&gt;
+&lt;p&gt;Create data table.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;conv_table &amp;lt;- tibble(C6 = c(0, 5, 9, 17, 25, 33, 49, 100),
+                     Peloton = c(0, 25, 30, 35, 40, 45, 50, 100),
+                     Difficulty = seq(from = 0, to = 10, length.out = 8 ))
+
+conv_table_long &amp;lt;- conv_table %&amp;gt;% 
+  gather(C6, Peloton, key = &amp;quot;Bike&amp;quot;, value = &amp;quot;Resistance&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;plot&#34;&gt;Plot&lt;/h2&gt;
+&lt;p&gt;Make the plot.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot &amp;lt;- ggplot(data = conv_table_long) +
+  geom_smooth(mapping = aes(x = Difficulty,
+                            y = Resistance,
+                            color = Bike),
+              se = FALSE) + 
+  scale_color_manual(values = c(&amp;quot;white&amp;quot;,
+                                pelo_red),
+                     labels = c(&amp;quot;Bowflex C6&amp;quot;,
+                                &amp;quot;Peloton&amp;quot;)) +
+  scale_x_continuous(n.breaks = 3,
+                     labels = c(&amp;quot;Easy&amp;quot;,
+                                &amp;quot;Hard&amp;quot;,
+                                &amp;quot;Impossible&amp;quot;)) +
+  labs(title = &amp;quot;Spin bike resistance&amp;quot;,
+       subtitle = &amp;quot;Peloton vs. Bowflex C6&amp;quot;,
+       x = &amp;quot;Difficulty&amp;quot;,
+       caption = &amp;quot;@LizRoten 2021 | Data r/pelotoncycle&amp;quot;) +
+  my_theme  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Display plot&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Final plot&#34; srcset=&#34;
+               /post/bowflex-c6-to-peloton-resistance-conversion-plots/featured_hu2c871f7b202bda0455a397ee4b901457_82617_8015b250b525fd93487a02f555284f65.webp 400w,
+               /post/bowflex-c6-to-peloton-resistance-conversion-plots/featured_hu2c871f7b202bda0455a397ee4b901457_82617_ed096600d3b79ee43397ed56a5502319.webp 760w,
+               /post/bowflex-c6-to-peloton-resistance-conversion-plots/featured_hu2c871f7b202bda0455a397ee4b901457_82617_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lizroten.com/post/bowflex-c6-to-peloton-resistance-conversion-plots/featured_hu2c871f7b202bda0455a397ee4b901457_82617_8015b250b525fd93487a02f555284f65.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;543&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;update&#34;&gt;Update!&lt;/h2&gt;
+&lt;p&gt;I was scrolling through aforementioned &lt;a href=&#34;https://www.reddit.com/r/SchwinnIC4_BowflexC6/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;r/SchwinnIC4_BowflexC6&lt;/a&gt; and found a post by another data person!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2021-07-08&lt;/strong&gt; It seems as though the Reddit user (u/raintower579) who created the formula has drifted into spam territory. The comment they made with the formula has been deleted. See the &lt;a href=&#34;https://www.reddit.com/r/SchwinnIC4_BowflexC6/comments/l7yxtt/dumb_question_what_is_the_peloton_to_ic4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;actual post here&lt;/a&gt;. Huge thanks to Phillip for contacting me regarding this.&lt;/p&gt;
+&lt;p&gt;$$ y = 0.0171x^2 - 0.64x + 9.1429 $$&lt;br&gt;
+where &lt;code&gt;x&lt;/code&gt; is the Peloton resistance and &lt;code&gt;y&lt;/code&gt; is the C6 resistance.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pelo_conversion &amp;lt;- function(x){
+  (0.0171*x^2) - (0.64*x) + 9.1429
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To estimate the equivalence beyond 50, we can create a new tibble and apply the function to a sequence of Peloton resistance settings. Instructors don&amp;rsquo;t tend to call out any value below 20, so we can start there.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tibble(peloton_resistance = seq(20,100,5)) %&amp;gt;%  # create Peloton resistance sequence, 20-100 by 5s
+  mutate(c6_resistance = round(pelo_conversion(peloton_resistance), 1))
+#&amp;gt; # A tibble: 17 x 2
+#&amp;gt;    peloton_resistance c6_resistance
+#&amp;gt;                 &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
+#&amp;gt;  1                 20           3.2
+#&amp;gt;  2                 25           3.8
+#&amp;gt;  3                 30           5.3
+#&amp;gt;  4                 35           7.7
+#&amp;gt;  5                 40          10.9
+#&amp;gt;  6                 45          15  
+#&amp;gt;  7                 50          19.9
+#&amp;gt;  8                 55          25.7
+#&amp;gt;  9                 60          32.3
+#&amp;gt; 10                 65          39.8
+#&amp;gt; 11                 70          48.1
+#&amp;gt; 12                 75          57.3
+#&amp;gt; 13                 80          67.4
+#&amp;gt; 14                 85          78.3
+#&amp;gt; 15                 90          90.1
+#&amp;gt; 16                 95         103. 
+#&amp;gt; 17                100         116.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By this table, I&amp;rsquo;ve been making my classes much harder than necessary.&lt;/p&gt;
+&lt;p&gt;We can plot this function, as shown below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = conv_table,
+       aes(x = Peloton,
+           y = C6)) +
+  geom_function( 
+    fun = pelo_conversion,
+    color = &amp;quot;white&amp;quot;) +
+  stat_function(
+    fun = pelo_conversion,
+    geom = &amp;quot;point&amp;quot;,
+    color = pelo_red,
+    size = 2, 
+    n = 17) +
+  scale_x_continuous(limits = c(20, 100)) +
+  scale_y_continuous(limits = c(0, 100)) +
+  labs(title = &amp;quot;Peloton to Bowflex C6 resistance conversion&amp;quot;,
+       x = &amp;quot;Peloton&amp;quot;,
+       y = &amp;quot;Bowflex C6&amp;quot;,
+       caption = &amp;quot;@LizRoten 2021 | Data r/pelotoncycle&amp;quot;) +
+  my_theme2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/bowflex-c6-to-peloton-resistance-conversion-plots/index.en_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;The big, flashing caveat here is that every bike is calibrated just &lt;em&gt;slightly&lt;/em&gt; differently, so this might not be correct for the machine in my bedroom.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,7 +1,7 @@
 ---
 widget: blank
 headless: true
-
+active: false
 # ... Put Your Section Options Here (title etc.) ...
 title: Gallery
 subtitle:
@@ -11,5 +11,5 @@ weight: 66  # section position on page
   # columns: '1'
 ---
 
-{{< gallery >}}
+{{< gallery album = "themes" >}}
 

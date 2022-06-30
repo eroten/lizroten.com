@@ -37,8 +37,8 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -53,7 +53,7 @@
   
   
 
-  <meta name="author" content="Alice Bighetti (吳恩達)" />
+  <meta name="author" content="Liz Roten" />
 
   
   
@@ -64,12 +64,12 @@
 Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/post/writing-technical-content/" />
+  <link rel="alternate" hreflang="en-us" href="https://lizroten.com/post/writing-technical-content/" />
 
   
   
   
-    <meta name="theme-color" content="#1565c0" />
+    <meta name="theme-color" content="#19535F" />
   
 
   
@@ -86,6 +86,8 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   
   
     
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -119,6 +121,8 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
     
 
     
@@ -252,10 +256,49 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+  <link rel="stylesheet" href="/css/wowchemy.9be36f46c2c8a9210fc378e8d31817d4.css" />
 
   
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93N4169W7Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-93N4169W7Q', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
   
@@ -277,10 +320,10 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/post/writing-technical-content/" />
+  <link rel="canonical" href="https://lizroten.com/post/writing-technical-content/" />
 
   
   
@@ -301,12 +344,12 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   
   <meta property="twitter:card" content="summary_large_image" />
   
-  <meta property="og:site_name" content="Academic" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/post/writing-technical-content/" />
-  <meta property="og:title" content="Writing technical content in Academic | Academic" />
+  <meta property="og:site_name" content="Liz Roten" />
+  <meta property="og:url" content="https://lizroten.com/post/writing-technical-content/" />
+  <meta property="og:title" content="Writing technical content in Academic | Liz Roten" />
   <meta property="og:description" content="Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
-Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation." /><meta property="og:image" content="https://academic-demo.netlify.app/post/writing-technical-content/featured.jpg" />
-    <meta property="twitter:image" content="https://academic-demo.netlify.app/post/writing-technical-content/featured.jpg" /><meta property="og:locale" content="en-us" />
+Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation." /><meta property="og:image" content="https://lizroten.com/post/writing-technical-content/featured.jpg" />
+    <meta property="twitter:image" content="https://lizroten.com/post/writing-technical-content/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -314,7 +357,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
         content="2019-07-12T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2019-07-12T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-04-16T13:55:58-05:00">
   
 
   
@@ -338,28 +381,28 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://academic-demo.netlify.app/post/writing-technical-content/"
+    "@id": "https://lizroten.com/post/writing-technical-content/"
   },
   "headline": "Writing technical content in Academic",
   
   "image": [
-    "https://academic-demo.netlify.app/post/writing-technical-content/featured.jpg"
+    "https://lizroten.com/post/writing-technical-content/featured.jpg"
   ],
   
   "datePublished": "2019-07-12T00:00:00Z",
-  "dateModified": "2019-07-12T00:00:00Z",
+  "dateModified": "2022-04-16T13:55:58-05:00",
   
   "author": {
     "@type": "Person",
-    "name": "Alice Bighetti (吳恩達)"
+    "name": "Liz Roten"
   },
   
   "publisher": {
     "@type": "Organization",
-    "name": "Academic",
+    "name": "Liz Roten",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+      "url": "https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.\nHighlight your code snippets, take notes on math classes, and draw diagrams from textual representation."
@@ -378,7 +421,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
 
 
-  <title>Writing technical content in Academic | Academic</title>
+  <title>Writing technical content in Academic | Liz Roten</title>
 </head>
 
 
@@ -393,7 +436,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
   
   
   
-  <script src="/js/wowchemy-init.min.13d3c1ccc66961c64e937f4e854fdd1e.js"></script>
+  <script src="/js/wowchemy-init.min.8d94c24f7f2845bf1dd16584caebe8cc.js"></script>
 
   
 
@@ -413,9 +456,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
       <div id="search-box">
         
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
-        aria-label="Search...">
+        
         
       </div>
 
@@ -457,7 +498,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
       
       <div class="d-none d-lg-inline-flex">
-        <a class="navbar-brand" href="/">Academic</a>
+        <a class="navbar-brand" href="/">Liz Roten</a>
       </div>
       
 
@@ -470,7 +511,7 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
       
       <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-        <a class="navbar-brand" href="/">Academic</a>
+        <a class="navbar-brand" href="/">Liz Roten</a>
       </div>
       
 
@@ -487,8 +528,6 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
           
           
           
-            
-          
 
           
 
@@ -499,21 +538,11 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
           
             
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
             
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#about"><span>Demo</span></a>
+            <a class="nav-link " href="/#"><span>Home</span></a>
           </li>
 
           
@@ -524,8 +553,6 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
           
           
           
-            
-          
 
           
 
@@ -539,129 +566,11 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
               
               
             
-            
-              
-              
-              
-                
-              
-              
             
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#posts"><span>Posts</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#projects"><span>Projects</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#talks"><span>Talks</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+            <a class="nav-link  active" href="/post"><span>Blog</span></a>
           </li>
 
           
@@ -691,7 +600,35 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/courses/"><span>Courses</span></a>
+            <a class="nav-link " href="/projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/talk"><span>Talks</span></a>
           </li>
 
           
@@ -718,17 +655,10 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
               
             
             
-              
-              
-              
-                
-              
-              
-            
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+            <a class="nav-link " href="/contact"><span>Contact</span></a>
           </li>
 
           
@@ -745,13 +675,6 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
         
         
           
-            
-            <li class="nav-item d-none d-lg-inline-flex">
-              <a class="nav-link" href="https://twitter.com/GeorgeCushen" data-toggle="tooltip" data-placement="bottom" title="Follow me on Twitter" target="_blank" rel="noopener" aria-label="Follow me on Twitter">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-          
         
 
         
@@ -762,23 +685,6 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
         
 
         
-        
-        <li class="nav-item dropdown theme-dropdown">
-          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-            <i class="fas fa-moon" aria-hidden="true"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-item js-set-theme-light">
-              <span>Light</span>
-            </a>
-            <a href="#" class="dropdown-item js-set-theme-dark">
-              <span>Dark</span>
-            </a>
-            <a href="#" class="dropdown-item js-set-theme-auto">
-              <span>Automatic</span>
-            </a>
-          </div>
-        </li>
         
 
         
@@ -840,8 +746,10 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
     
     
       
+          Last updated on
+      
     
-    Jul 12, 2019
+    2022-04-22
   </span>
   
 
@@ -910,7 +818,7 @@ data.head()
 <p>Demo:</p>
 
 
-<div id="chart-549613728" class="chart"></div>
+<div id="chart-638942517" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -920,7 +828,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json("./line-chart.json", function(chart) {
-        Plotly.plot('chart-549613728', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-638942517', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -1166,7 +1074,7 @@ You found me!
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/post/writing-technical-content/&amp;text=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://lizroten.com/post/writing-technical-content/&amp;text=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1179,7 +1087,7 @@ You found me!
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/post/writing-technical-content/&amp;t=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://lizroten.com/post/writing-technical-content/&amp;t=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1192,7 +1100,7 @@ You found me!
       
       
       <li>
-        <a href="mailto:?subject=Writing%20technical%20content%20in%20Academic&amp;body=https://academic-demo.netlify.app/post/writing-technical-content/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Writing%20technical%20content%20in%20Academic&amp;body=https://lizroten.com/post/writing-technical-content/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1205,34 +1113,8 @@ You found me!
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/post/writing-technical-content/&amp;title=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https://lizroten.com/post/writing-technical-content/&amp;title=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=Writing%20technical%20content%20in%20Academic%20https://academic-demo.netlify.app/post/writing-technical-content/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/post/writing-technical-content/&amp;title=Writing%20technical%20content%20in%20Academic" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
-          <i class="fab fa-weibo"></i>
         </a>
       </li>
     
@@ -1264,13 +1146,13 @@ You found me!
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/alice-bighetti-%E5%90%B3%E6%81%A9%E9%81%94/avatar_hu3c64bd0f98018e2d901b7c60447ac42e_1387900_270x270_fill_q75_lanczos_center.jpg" alt="Alice Bighetti (吳恩達)"></a>
+      <a href="https://lizroten.com/"><img class="avatar mr-3 avatar-circle" src="/author/liz-roten/avatar_huf68b575c4c99e0c923dd46889fc37e3e_342912_270x270_fill_q75_lanczos_center.jpg" alt="Liz Roten"></a>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Alice Bighetti (吳恩達)</a></h5>
-      <h6 class="card-subtitle">Professor of Artificial Intelligence</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <h5 class="card-title"><a href="https://lizroten.com/">Liz Roten</a></h5>
+      <h6 class="card-subtitle">Data Scientist &amp; Cartographer</h6>
+      <p class="card-text">My favorite food is eggplant.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -1302,7 +1184,7 @@ You found me!
       
     
     <li>
-      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+      <a href="https://twitter.com/LizRoten" target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
@@ -1319,24 +1201,7 @@ You found me!
       
     
     <li>
-      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/gcushen" target="_blank" rel="noopener">
+      <a href="https://github.com/eroten" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
     </li>
@@ -1353,8 +1218,23 @@ You found me!
       
     
     <li>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/eroten" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://raw.githubusercontent.com/eroten/cv/master/cv.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
       </a>
     </li>
   
@@ -1403,6 +1283,10 @@ You found me!
 
   
 
+  
+  <p class="powered-by">
+    © Liz Roten 2022
+  </p>
   
 
   
@@ -1490,6 +1374,12 @@ You found me!
         
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
         
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/css.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/javascript.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/markdown.min.js" crossorigin="anonymous"></script>
+        
       
 
     
@@ -1507,20 +1397,20 @@ You found me!
     
     
       
-      <script id="search-hit-fuse-template" type="text/x-template">
-        <div class="search-hit" id="summary-{{key}}">
+      <script id="search-hit-algolia-template" type="text/html">
+        <div class="search-hit">
           <div class="search-hit-content">
             <div class="search-hit-name">
-              <a href="{{relpermalink}}">{{title}}</a>
-              <div class="article-metadata search-hit-type">{{type}}</div>
-              <p class="search-hit-description">{{snippet}}</p>
+              <a href="{{relpermalink}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
             </div>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{#helpers.highlight}}{ "attribute": "summary" }{{/helpers.highlight}}</p>
           </div>
         </div>
       </script>
       
-        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js" crossorigin="anonymous"></script>
+      
       
     
 
@@ -1546,6 +1436,8 @@ You found me!
     
 
     
+    <script src="/en/js/algolia-search-built.min.5faccf136cd55ac5da8926ebf5ed89df.js" type="module"></script>
+    
 
     
     
@@ -1562,11 +1454,8 @@ You found me!
     
     
     
-      
-      
     
-    
-    <script src="/en/js/wowchemy.min.63639926e24ecfb8040ea052c1077969.js"></script>
+    <script src="/en/js/wowchemy.min.9e0c1c9ce03b87dc836c88c80c5864ce.js"></script>
 
     
   <script async defer src="https://buttons.github.io/buttons.js"></script>

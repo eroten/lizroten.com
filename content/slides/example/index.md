@@ -1,18 +1,21 @@
 ---
+title: Slides
+summary: An introduction to using Academic's Slides feature.
 authors: []
+tags: []
 categories: []
 date: "2019-02-05T00:00:00Z"
 slides:
-  highlight_style: dracula
+  # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
-summary: An introduction to using Wowchemy's Slides feature.
-tags: []
-title: Slides
+  # Choose a code highlighting style (if highlighting enabled in `params.toml`)
+  #   Light style: github. Dark style: dracula (default).
+  highlight_style: dracula
 ---
 
-# Create slides in Markdown with Wowchemy
+# Create slides in Markdown with Academic
 
-[Wowchemy](https://wowchemy.com/) | [Documentation](https://owchemy.com/docs/managing-content/#create-slides)
+[Academic](https://sourcethemes.com/academic/) | [Documentation](https://sourcethemes.com/academic/docs/managing-content/#create-slides)
 
 ---
 
@@ -158,6 +161,6 @@ Create `assets/css/reveal_custom.css` with:
 
 # Questions?
 
-[Ask](https://github.com/wowchemy/wowchemy-hugo-modules/discussions)
+[Ask](https://spectrum.chat/academic)
 
-[Documentation](https://wowchemy.com/docs/managing-content/#create-slides)
+[Documentation](https://sourcethemes.com/academic/docs/managing-content/#create-slides)

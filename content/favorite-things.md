@@ -7,19 +7,13 @@ Congrats! You found my stash of favorite internet things. Mostly sfw. Enjoy!
 
 ## Tweets  
 
-This bug is now a feature  
-
-{{ < tweet 1275605680242610177 >}}
+{{< tweet user="cassidoo" id="1275605680242610177" >}}
 
 
 Toddler v.s. Husky  
 
-{{< tweet 1193220924327288834 >}}  
+{{< tweet user="Lisa_Bizzle" id="1193220924327288834" >}}  
 
-
-BEANS  
-
-{{< tweet 1074795260012847104 >}}  
 
 
 

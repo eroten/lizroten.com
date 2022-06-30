@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>parks | Liz Roten</title>
+    <link>https://lizroten.com/tag/parks/</link>
+      <atom:link href="https://lizroten.com/tag/parks/index.xml" rel="self" type="application/rss+xml" />
+    <description>parks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>parks</title>
+      <link>https://lizroten.com/tag/parks/</link>
+    </image>
+    
+    <item>
+      <title>Make a neat header image</title>
+      <link>https://lizroten.com/post/make-a-neat-header/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/post/make-a-neat-header/</guid>
+      <description>&lt;p&gt;I made a pretty neat header image for this site using raster data from my &lt;a href=&#34;https://lizroten.com/project/square-lake-master-plan/&#34;&gt;Square Lake Master Plan Update&lt;/a&gt; project.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(sf)
+library(ggplot2)
+library(dplyr)
+library(Cairo)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Download regional park geography from &lt;a href=&#34;https://gisdata.mn.gov/dataset/us-mn-state-metc-plan-parks-regional&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Minnesota Geospatial Commons&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## base geometries -------------------------------------------------------------
+temp &amp;lt;- tempfile()
+download.file(&amp;quot;ftp://ftp.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_metc/plan_parks_regional/gpkg_plan_parks_regional.zip&amp;quot;,
+  destfile = temp
+)
+
+square_lake &amp;lt;- sf::read_sf(unzip(temp, &amp;quot;plan_parks_regional.gpkg&amp;quot;)) %&amp;gt;%
+  filter(STATUS == &amp;quot;Existing&amp;quot;) %&amp;gt;%
+  filter(PARKNAME == &amp;quot;Square Lake&amp;quot;) %&amp;gt;%
+  group_by(PARKNAME, AGENCY) %&amp;gt;%
+  sf::st_union() %&amp;gt;%
+  st_as_sf() %&amp;gt;%
+  st_transform(4326)
+
+fs::file_delete(&amp;quot;plan_parks_regional.gpkg&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I refined &lt;code&gt;contours.RDS&lt;/code&gt; in my previous project. The data come from &lt;a href=&#34;https://www.dnr.state.mn.us/maps/mntopo/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MnTOPO&lt;/a&gt;, a web application for viewing, printing and downloading high-resolution elevation data for the State of Minnesota that was collected using LiDAR technology. I only needed data from a small area, so I drew a polygon over my study area using MnTOPO.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# load 3 meter contours over the Square Lake area
+
+contour &amp;lt;- readRDS(&amp;quot;contours.RDS&amp;quot;) %&amp;gt;%
+  st_transform(4326) %&amp;gt;%
+  sf::st_crop(xmin = -92.7854633,
+              ymin = 45.1497518,
+              xmax = -92.8007197,
+              ymax = 45.1568488)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Generate plot with &lt;code&gt;{ggplot2}&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot() +
+  geom_sf(
+      data = contour,
+      color = &amp;quot;gray75&amp;quot;,
+      lwd = 0.2
+    ) +
+  theme_void()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/make-a-neat-header/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;Finally, save the plot as a PDF and open it in Adobe Illustrator for modifications.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Cairo::CairoPDF(file = &amp;quot;contours.pdf&amp;quot;, 
+                onefile = TRUE, width = 12, height = 10, bg = &amp;quot;transparent&amp;quot;)
+ggplot() +
+  geom_sf(
+      data = contour,
+      color = &amp;quot;gray75&amp;quot;,
+      lwd = 0.2
+    ) +
+  theme_void()
+dev.off()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I adjusted the background and finessed the positioning so it would display like I wanted it to on my home page. Here is the final product.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Header image&#34; srcset=&#34;
+               /post/make-a-neat-header/contours_hu637eb66c11b6a34c55e3ff756d6a0aae_1405691_be864a52b4ca98676e70d56f8191f26e.webp 400w,
+               /post/make-a-neat-header/contours_hu637eb66c11b6a34c55e3ff756d6a0aae_1405691_b54c8b5b2b6b11193b0ab9cc0f5ca624.webp 760w,
+               /post/make-a-neat-header/contours_hu637eb66c11b6a34c55e3ff756d6a0aae_1405691_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lizroten.com/post/make-a-neat-header/contours_hu637eb66c11b6a34c55e3ff756d6a0aae_1405691_be864a52b4ca98676e70d56f8191f26e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;503&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Regional Parks and the American Community Survey</title>
+      <link>https://lizroten.com/project/regional-parks-acs/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/regional-parks-acs/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;In May 2019, I completed an R Shiny app visualizing regional parks and trails in context with American Community Survey (ACS) demographic data. The project&amp;rsquo;s first iteration was built as a mini-app to be used in workshop sessions with regional parks implementing agencies. Later, I re-structured the backend to follow the &lt;a href=&#34;https://github.com/ThinkR-open/golem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;{golem}&lt;/code&gt;&lt;/a&gt; framework&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Regional Parks and the American Community Survey is a mini-app designed for use by Regional Parks implementing agencies to assist in their progressing toward a more equitable use of regional parks. The app complements the Regional Parks Equity Toolkit, a set of questions and a process to clarify how regional park projects are advancing equity. The app facilitates direct examination of regional parks and trails system and the demographic characteristics of the census tracts surrounding them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;new-developments&#34;&gt;New developments&lt;/h2&gt;
+&lt;p&gt;After I transitioned to my split between Community Development (CD) and Metropolitan Transportation Services (MTS) divisions, another team member took the project on. I supported that person in building skills in &lt;code&gt;{shiny}&lt;/code&gt; and &lt;a href=&#34;https://github.com/ThinkR-open/golem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;{golem}&lt;/code&gt;&lt;/a&gt;. I also used GitHub to manage app enhancements and document workflow.&lt;/p&gt;
+&lt;p&gt;Now, the app boasts a sophisticated modeling component, estimating the demographic characteristics of populations within a given distance, or buffer, around the park or trail. We expect the update to roll out around Q2 2021.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-regional-parks-acs&#34; href=&#34;https://lizroten.com/media/albums/regional-parks-acs/percent_asian.PNG&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/regional-parks-acs/percent_asian_hu91fa393d83e942f451387bae7d725cbb_564277_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;percent_asian.PNG&#34; width=&#34;309&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-regional-parks-acs&#34; href=&#34;https://lizroten.com/media/albums/regional-parks-acs/percent_hispanic.PNG&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/regional-parks-acs/percent_hispanic_hu86c047115c69d4975b43b4dc31611b28_805849_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;percent_hispanic.PNG&#34; width=&#34;309&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Square Lake Park Master Plan</title>
+      <link>https://lizroten.com/project/square-lake-master-plan/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/square-lake-master-plan/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Square Lake Park Special Recreation Feature recently underwent a master plan update. I served on the technical advisory committee (TAC) and conducted a focused analysis estimating annual visitation and visitor activity within the park. I presented findings to Washington County staff and the entire TAC.&lt;/p&gt;
+&lt;h3 id=&#34;overall-visitation&#34;&gt;Overall visitation&lt;/h3&gt;
+&lt;p&gt;Square Lake Park has just one entrance and is surrounded by relatively low-traffic roads. I drew a gate over the park entrance and estimated the number of vehicles that pass through the gate using &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight Volume&lt;/a&gt;. Then, I applied a persons-per-vehicle multiplier to estimate the number of visitors. I also used &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight&amp;rsquo;s&lt;/a&gt; visitor home location metrics to estimate the spatial distribution of visitors.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-liz-roten-for-metropolitan-council-2021&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Liz Roten for Metropolitan Council, 2021&#34; srcset=&#34;
+               /project/square-lake-master-plan/visitor_home_metrics_hubd6411e6b27e792e6bf68170c827eb86_154764_039e4beaeb6ea3cf38d620d6d66d007c.webp 400w,
+               /project/square-lake-master-plan/visitor_home_metrics_hubd6411e6b27e792e6bf68170c827eb86_154764_04acd44b8907ebcdb719d6b4bb683cef.webp 760w,
+               /project/square-lake-master-plan/visitor_home_metrics_hubd6411e6b27e792e6bf68170c827eb86_154764_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lizroten.com/project/square-lake-master-plan/visitor_home_metrics_hubd6411e6b27e792e6bf68170c827eb86_154764_039e4beaeb6ea3cf38d620d6d66d007c.webp&#34;
+               width=&#34;676&#34;
+               height=&#34;606&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Liz Roten for Metropolitan Council, 2021
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;activity-within-the-park&#34;&gt;Activity within the park&lt;/h3&gt;
+&lt;p&gt;To visualize visitor activity within the park, I generated a hexagon grid and ran &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight&lt;/a&gt; analyses for different trip intersection types.&lt;/p&gt;
+&lt;p&gt;These maps visualize the activity within Square Lake Park on an average day during operating hours (6am - 10pm) in Summer 2019. Each map shows a grid of hexagons covering Square Lake Park. The hexagons are colored such that darker shades indicate greater activity, and lighter shades indicate lower activity. Each trip intersection type highlights the ways in which visitors enjoy the park. However, activity on Square Lake, such as paddling, boating, or using the fishing pier, is not detected.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    View a higher resolution of this viz &lt;a href=&#34;https://lizroten.com/docs/Hex%20map%20series.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;streetlight-data&#34;&gt;StreetLight Data&lt;/h3&gt;
+&lt;p&gt;Data in this data visualization comes from &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight Data&lt;/a&gt;, an independent data provider which cleans, processes and assimilates millions of spatial data points from a combination of mobile phone Location-Based Services (LBS) data and GPS data. The data is anonymized, aggregated, and accessed only through specific analyses.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>{use.estimates}</title>
+      <link>https://lizroten.com/project/regional-parks-use-estimates/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/regional-parks-use-estimates/</guid>
+      <description>&lt;p&gt;Prior to 2019, regional parks use estimates were completed using a series of Excel workbooks, originally written in the 1990s. A colleague re-wrote the procedure in a single RMarkdown document for the 2018 estimates. Later, I developed &lt;code&gt;{use.estimates}&lt;/code&gt;, which spread the calculation process over multiple vignettes. Each vignette produces a report for each step in the process, which allowed our parks researcher to review results quickly. All package data is also documented for future data scientists.&lt;/p&gt;
+&lt;p&gt;This package is managed via GitHub such that new Issues and pull requests are integrated into project management. The package is regularly tested using &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Actions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can see the published use estimate reports &lt;a href=&#34;https://metrocouncil.org/Parks/Research/Annual-Use-Estimates.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using location-based services to locate high activity areas within Twin Cities regional parks</title>
+      <link>https://lizroten.com/talk/wilmds-streetlight-parks/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/wilmds-streetlight-parks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Como Regional Park Hex Grid StreetLight Analysis</title>
+      <link>https://lizroten.com/project/como-hex-streetlight-parks/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/como-hex-streetlight-parks/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;To better understand activity within Como Regional Park and how that activity shifts with the seasons, I created a hexagon grid over the park and then used aggregated and anonymized location-based services data provided by &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight Data&lt;/a&gt; to measure relative activity in each hexagon.&lt;/p&gt;
+&lt;p&gt;This project was my first endeavor with Tableau and was used as a pilot before we dedicated additional resources to using StreetLight Data for parks research.&lt;/p&gt;
+&lt;h2 id=&#34;details&#34;&gt;Details&lt;/h2&gt;
+&lt;h3 id=&#34;streetlight-data&#34;&gt;StreetLight Data&lt;/h3&gt;
+&lt;p&gt;Data in this data visualization comes from StreetLight, an independent data provider which cleans, processes and assimilates millions of spatial data points from a combination of mobile phone Location-Based Services (LBS) data and GPS data. The data is anonymized, aggregated, and accessed only through specific analyses.&lt;/p&gt;
+&lt;p&gt;This viz draws on LBS data. Cell phone apps that use LBS collect the device&amp;rsquo;s location in space and time. StreetLight detects trips, a movement with clear start and stop locations. StreetLight uses trips to create the StreetLight Traffic Index, which is a normalized measure of the relative traffic, or activity, in an area. The data’s spatial precision is 65ft or better and StreetLight estimates a 23% penetration rate for the combined US and Canada adult population.&lt;/p&gt;
+&lt;h3 id=&#34;analysis&#34;&gt;Analysis&lt;/h3&gt;
+&lt;p&gt;For this viz, we made a hexagon grid over Como Regional Park. We then ran a StreetLight analysis to measure the relative traffic in each hexagon and repeated the analysis for Winter (November 2017 - February 2018), Summer (May 2018 - August 2018), and all 2018. StreetLight returns a Traffic Index value for each hexagon for every trip intersection type, day type, and day part configuration.&lt;/p&gt;
+&lt;h3 id=&#34;interactive-map&#34;&gt;Interactive Map&lt;/h3&gt;
+&lt;p&gt;In the Tableau viz, you can view the analysis results. Each hexagon on the map changes color according to its Traffic Index, or activity level. The darker the color, the higher the traffic. You can view the exact Traffic Index value of any hexagon by hovering over it. Use the map tools in the upper left corner to pan, zoom, and adjust the map view. We suggest you view this story in full screen for the best display.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Location-based Data in Regional Parks Visitors Research</title>
+      <link>https://lizroten.com/talk/tcrg-streetlight-parks/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/tcrg-streetlight-parks/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
