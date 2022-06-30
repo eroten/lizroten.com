@@ -20,7 +20,6 @@
       {{ $date = $page.Date.Format (site.Params.publications.date_format | default "January, 2006") }}
     {{ else }}
       {{ if ne $page.Params.Lastmod $page.Params.Date }}
-          {{ i18n "date" }}
       {{ end }}
     {{ end }}
     {{ $date }}
