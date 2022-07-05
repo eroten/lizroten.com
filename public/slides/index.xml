@@ -135,5 +135,645 @@ $$&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/license/</guid>
+      <description>&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2022 Liz Roten&lt;/p&gt;
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p&gt;
+&lt;p&gt;The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.&lt;/p&gt;
+&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/outline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/outline/</guid>
+      <description>&lt;h1 id=&#34;outline&#34;&gt;Outline&lt;/h1&gt;
+&lt;p&gt;2022-06-16&lt;/p&gt;
+&lt;h2 id=&#34;hook&#34;&gt;Hook&lt;/h2&gt;
+&lt;h2 id=&#34;villain&#34;&gt;Villain&lt;/h2&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;By finding an aspect of the project you can be proud of, you can enjoy
+working on something you don’t care about and set up the project for
+future success.&lt;/p&gt;
+&lt;p&gt;Find your ___?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pride point&lt;/li&gt;
+&lt;li&gt;champion&lt;/li&gt;
+&lt;li&gt;passion project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Intake&lt;/li&gt;
+&lt;li&gt;Do and document&lt;/li&gt;
+&lt;li&gt;Post-project&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;h3 id=&#34;intake-find-your-thing&#34;&gt;Intake: Find &lt;em&gt;your&lt;/em&gt; thing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Review existing materials&lt;/li&gt;
+&lt;li&gt;How to find your Thing
+&lt;ul&gt;
+&lt;li&gt;List the things you could do better&lt;/li&gt;
+&lt;li&gt;Make it a learning opportunity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Replicate with your chosen methods.
+&lt;ul&gt;
+&lt;li&gt;Are there maps? Make the maps. Are there plots? Make the plots.&lt;/li&gt;
+&lt;li&gt;If you cannot replicate it, why?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;“Documenatation is a love letter to your future self” - Damien
+Conway&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;action-do-and-document&#34;&gt;Action: Do and document&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;document all the things
+&lt;ul&gt;
+&lt;li&gt;use in-line code comments&lt;/li&gt;
+&lt;li&gt;write long-form narratives describing processes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;focus on reproducibility&lt;/li&gt;
+&lt;li&gt;Pay attention not only to the &lt;em&gt;how&lt;/em&gt;, but the &lt;em&gt;why&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;How: We used data from the DOT to estimate truck volume.&lt;/li&gt;
+&lt;li&gt;Why: DOT data is the industry standard, freely available, and
+reliable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Take breaks and celebrate the small wins along the way.&lt;/li&gt;
+&lt;li&gt;Use version control and a git GUI to manage your workflow and track
+changes over time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;post-project-debrief&#34;&gt;Post-project debrief&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure the project is actually dead. Don’t rush to get a death
+certificate.&lt;/li&gt;
+&lt;li&gt;Gather and synthesize communications and significant decisions.
+Again, focus on the &lt;em&gt;why&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Write your love letter
+&lt;ul&gt;
+&lt;li&gt;What does the next person who touches this project need to know?&lt;/li&gt;
+&lt;li&gt;Use sassy footnotes and emoji (within reason)&lt;/li&gt;
+&lt;li&gt;Share opinions and suggestions for improvement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/readme/</guid>
+      <description>&lt;!-- badges: end --&gt;
+&lt;p&gt;This repo contains slides and supporting materials for my presentation
+at the &lt;a href=&#34;https://www.rstudio.com/conference/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2022 RStudio Conference&lt;/a&gt; in
+Washington D.C, July 28-29.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It happens to us all - a request to update a workflow or data started
+before your time. The materials left behind leave much to be desired;
+a few Word docs here, a couple Excel workbooks there, some scattered
+ArcGIS maps, and PDFs. But fear not! In this talk, we will cover how
+to complete a project intake by evaluating current workflows, data
+sources, and methods. Then, we will assess which tools to use,
+including packages like {groundhog}, {testthat}, and {rmarkdown} and
+version control with GitHub. We will cover code and file hygiene, and
+how to maintain your motivation when obstacles appear. Finally, we
+will explore strategies for making this legacy project your own and
+setting up the next round of updates for success.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;dates-logistics-requirements-etc&#34;&gt;Dates, logistics, requirements, etc.&lt;/h1&gt;
+&lt;p&gt;A &lt;em&gt;crisp&lt;/em&gt; 20 minutes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mid-June: schedule brown-bag style runthrough&lt;/li&gt;
+&lt;li&gt;July 1: Have content mostly finalized&lt;/li&gt;
+&lt;li&gt;July 7: Deadline for outfit assembly, get haircut.&lt;/li&gt;
+&lt;li&gt;July 12: Speaker Coaching Content Review&lt;/li&gt;
+&lt;li&gt;July 21: Complete talk backup recording&lt;/li&gt;
+&lt;li&gt;July 24: FLIGHT TO DC!&lt;/li&gt;
+&lt;li&gt;July 25-27
+&lt;ul&gt;
+&lt;li&gt;Practice first thing in the morning, just before bed.&lt;/li&gt;
+&lt;li&gt;Exercise, go to bed early, no sweets the morning of!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contact person - Kim Goldsmith!!!&lt;/p&gt;
+&lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
+&lt;p&gt;Current plan is to use xaringan, but this might get difficult due to
+challenges with HTML styling. Backup is MS PowerPoint.&lt;/p&gt;
+&lt;p&gt;This &lt;em&gt;shouldn’t&lt;/em&gt; have any actual tabular data, but we will see.&lt;/p&gt;
+&lt;p&gt;I my previous experience with xaringinan makes me have some reservations
+about using it for this talk. This talk may rely heavily on screenshots
+and images. I also DREAD the constant scrolling up and down to get to
+each slide and the messy outline panel.&lt;/p&gt;
+&lt;p&gt;This could potentially be remedied by modularization and clever
+&lt;code&gt;results=&#39;asis&#39;&lt;/code&gt; chunks.&lt;/p&gt;
+&lt;h1 id=&#34;repo-structure&#34;&gt;Repo structure&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.\slides-reference.Rmd&lt;/code&gt; is the standard xaringanthemer template.
+Will use for reference in &lt;code&gt;.\slides.Rmd&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.\assets\&lt;/code&gt; contain items called by &lt;code&gt;slides.Rmd&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.\assets\css\&lt;/code&gt; contains all CSS data, including font files,
+colors, etc.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.\assets\fig\&lt;/code&gt; contains plots, screenshots, gifs, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;PRE class=&#34;fansi fansi-output&#34;&gt;&lt;CODE&gt;## &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;.&lt;/span&gt;
+## ├── CODEOWNERS
+## ├── LICENSE.md
+## ├── &lt;span style=&#39;color: #00BB00;&#39;&gt;README.Rmd&lt;/span&gt;
+## ├── README.md
+## ├── &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;assets&lt;/span&gt;
+## ├── &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;data&lt;/span&gt;
+## ├── &lt;span style=&#39;color: #00BB00;&#39;&gt;outline.Rmd&lt;/span&gt;
+## ├── outline.md
+## ├── rstudioconf22-oddly-satisfying.Rproj
+## ├── &lt;span style=&#39;color: #00BB00;&#39;&gt;slides-reference.Rmd&lt;/span&gt;
+## ├── &lt;span style=&#39;color: #00BB00;&#39;&gt;slides.Rmd&lt;/span&gt;
+## ├── slides.html
+## ├── &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;slides_files&lt;/span&gt;
+## ├── &lt;span style=&#39;color: #00BB00;&#39;&gt;supporting-materials.Rmd&lt;/span&gt;
+## ├── supporting-materials.md
+## ├── &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;supporting-materials_cache&lt;/span&gt;
+## └── &lt;span style=&#39;color: #0000BB; font-weight: bold;&#39;&gt;supporting-materials_files&lt;/span&gt;
+&lt;/CODE&gt;&lt;/PRE&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/supporting-materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/slides/rstudioconf22-oddly-satisfying/supporting-materials/</guid>
+      <description>&lt;h1 id=&#34;supporting-materials&#34;&gt;Supporting materials&lt;/h1&gt;
+&lt;p&gt;2022-06-23&lt;/p&gt;
+&lt;h2 id=&#34;color-palette&#34;&gt;Color palette&lt;/h2&gt;
+&lt;p&gt;Colors based on
+&lt;a href=&#34;https://github.com/EdwinTh/dutchmasters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;{dutchmasters}&lt;/code&gt;&lt;/a&gt;, semi.joan’s
+&lt;a href=&#34;https://www.instagram.com/semi.joan/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;instagram&lt;/a&gt;, and Blackbird Fabrics
+collection of
+&lt;a href=&#34;https://www.blackbirdfabrics.com/en-us/collections/linen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/palette-display-1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;intro-slide&#34;&gt;Intro slide&lt;/h2&gt;
+&lt;p&gt;Some generative aRt ideas?&lt;/p&gt;
+&lt;h3 id=&#34;gradients-with-dots&#34;&gt;Gradients with dots&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[2]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-2.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[3]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-3.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-4.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-5.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[6]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-6.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[7]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/single-gradients-7.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[2]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-2.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[3]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-3.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-4.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-5.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[6]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-6.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[7]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/bubble-bar-gradients-7.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/combined-gradient-1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;h3 id=&#34;watercolor-style-abstracts&#34;&gt;Watercolor style abstracts&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;supporting-materials_files/figure-gfm/watercolor-plot-1.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;satisfying-gif-candidates&#34;&gt;Satisfying gif candidates&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://i.imgur.com/g5fnn24.mp4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://i.imgur.com/g5fnn24.mp4&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;tiktok-embed&#34; cite=&#34;https://www.tiktok.com/@fenitas.nl/video/7093892979659738373&#34; data-video-id=&#34;7093892979659738373&#34; style=&#34;max-width: 605px;min-width: 325px;&#34;&gt;
+&lt;section&gt;
+&lt;a target=&#34;_blank&#34; title=&#34;@fenitas.nl&#34; href=&#34;https://www.tiktok.com/@fenitas.nl&#34;&gt;@fenitas.nl&lt;/a&gt;
+Reply to @m_aloma.3
+&lt;a target=&#34;_blank&#34; title=&#34;♬ Better Together - Jack Johnson&#34; href=&#34;https://www.tiktok.com/music/Better-Together-6939780361380366338&#34;&gt;♬
+Better Together - Jack Johnson&lt;/a&gt;
+&lt;/section&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://www.tiktok.com/embed.js&#34;&gt;&lt;/script&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/v4ue9y/this_transition_of_colour/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/uxtpz2/hay_this_is_pretty_satisfying/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/vctpqm/self_aligining_nails_how/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/v4mn16/log_splitting_the_water/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/uw2xah/the_making_of_pastry_art/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/u92s9k/new_warehouse_floor/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/qtqeys/cleaning_up_the_lines/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;620&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;iframe id=&#34;reddit-embed&#34; src=&#34;https://www.redditmedia.com/r/oddlysatisfying/comments/taxpo9/i_work_in_a_steel_mill_and_we_were_rolling_one_of/?ref_source=embed&amp;amp;ref=share&amp;amp;embed=true&#34; sandbox=&#34;allow-scripts allow-same-origin allow-popups&#34; style=&#34;border: none;&#34; height=&#34;446&#34; width=&#34;640&#34; scrolling=&#34;no&#34;&gt;
+&lt;/iframe&gt;
+&lt;div style=&#34;position:relative; padding-bottom:calc(177.78% + 44px)&#34;&gt;
+&lt;iframe src=&#34;https://gfycat.com/ifr/FlawlessNiftyCatbird&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; width=&#34;100%&#34; height=&#34;100%&#34; style=&#34;position:absolute;top:0;left:0;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div style=&#34;position:relative; padding-bottom:calc(125.00% + 44px)&#34;&gt;
+&lt;iframe src=&#34;https://gfycat.com/ifr/NeedyGivingBufeo&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; width=&#34;100%&#34; height=&#34;100%&#34; style=&#34;position:absolute;top:0;left:0;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
