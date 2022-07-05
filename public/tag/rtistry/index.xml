@@ -5,12 +5,266 @@
     <link>https://lizroten.com/tag/rtistry/</link>
       <atom:link href="https://lizroten.com/tag/rtistry/index.xml" rel="self" type="application/rss+xml" />
     <description>rtistry</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Fri, 02 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2022</copyright><lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
       <title>rtistry</title>
       <link>https://lizroten.com/tag/rtistry/</link>
     </image>
+    
+    <item>
+      <title>Color palette exploration</title>
+      <link>https://lizroten.com/post/color-palette-exploration/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/post/color-palette-exploration/</guid>
+      <description>&lt;h2 id=&#34;color-palette&#34;&gt;Color palette&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m having a moment with linen, so I decided to make my color palette for my rstudio conference talk &lt;a href=&#34;&#34;&gt;a link here&lt;/a&gt; match my handmade garments.&lt;/p&gt;
+&lt;p&gt;Colors based on &lt;a href=&#34;https://github.com/EdwinTh/dutchmasters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;{dutchmasters}&lt;/code&gt;&lt;/a&gt;, semi.joan&amp;rsquo;s &lt;a href=&#34;https://www.instagram.com/semi.joan/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;instagram&lt;/a&gt;, and Blackbird Fabrics collection of &lt;a href=&#34;https://www.blackbirdfabrics.com/en-us/collections/linen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linen&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dutch_white &amp;lt;- dutchmasters$pearl_earring[&amp;quot;white(colar)&amp;quot;]
+
+brick &amp;lt;- colorRampPalette(c(&amp;quot;#A65746&amp;quot;, dutch_white))
+
+midnight &amp;lt;- colorRampPalette(c(&amp;quot;#5A6E73&amp;quot;, dutch_white))
+
+clay &amp;lt;- colorRampPalette(c(&amp;quot;#59302D&amp;quot;, dutch_white))
+
+taupe &amp;lt;- colorRampPalette(c(&amp;quot;#BFB3A4&amp;quot;, dutch_white))
+
+acorn &amp;lt;- colorRampPalette(c(&amp;quot;#BF895A&amp;quot;, dutch_white))
+
+seaweed &amp;lt;- colorRampPalette(c(&amp;quot;#262001&amp;quot;, dutch_white)) 
+
+noil_black &amp;lt;- colorRampPalette(c(&amp;quot;#0D0D0D&amp;quot;, dutch_white))
+
+white &amp;lt;- colorRampPalette(c(dutch_white, &amp;quot;#FFFFFF&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Function to create palette ramp with a set number of levels.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;create_palette_ramp &amp;lt;- function(x = 50){
+  
+  tibble::tibble(
+    family = c(rep(&amp;quot;brick&amp;quot;, x),
+               rep(&amp;quot;midnight&amp;quot;, x),
+               rep(&amp;quot;clay&amp;quot;, x),
+               rep(&amp;quot;taupe&amp;quot;, x),
+               rep(&amp;quot;acorn&amp;quot;, x),
+               rep(&amp;quot;noil_black&amp;quot;, x),
+               rep(&amp;quot;white&amp;quot;, x),
+               rep(&amp;quot;seaweed&amp;quot;, x)),
+    level = c(rep(1:x, 8)),
+    code = c(brick(x),
+             midnight(x),
+             clay(x),
+             taupe(x),
+             acorn(x),
+             noil_black(x),
+             white(x),
+             seaweed(x))
+  ) %&amp;gt;% 
+    dplyr::arrange(-level)
+}
+
+palette_ramp50 &amp;lt;- create_palette_ramp()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(palette_ramp50,
+       aes(x = level,
+           y = family,
+           color = code)) +
+  geom_point(size = 18.4,
+             shape = 15) +
+  scale_color_identity() +
+  scale_y_discrete(limits = rev) +
+  labs(title = &amp;quot;Color palette&amp;quot;) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text.x = element_blank(),
+        panel.grid = element_blank(),
+        axis.text.y = element_text(hjust = 0))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/palette-display-1.png&#34; width=&#34;2100&#34; /&gt;
+&lt;h2 id=&#34;gradients-with-dots&#34;&gt;Gradients with dots&lt;/h2&gt;
+&lt;p&gt;Notice &lt;code&gt;{purrr}&lt;/code&gt; use to generate a plot for each color all at once.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24601)
+
+split_palette &amp;lt;- create_palette_ramp(200) %&amp;gt;% 
+  filter(family != &amp;quot;white&amp;quot;) %&amp;gt;%
+  arrange(family, -level) %&amp;gt;% 
+  group_by(family) %&amp;gt;% 
+  group_split()
+
+
+purrr::map(split_palette, function(x){
+  p &amp;lt;- ggplot(x,
+              aes(x = family,
+                  y = level,
+                  color = code)) +
+    geom_jitter(
+      size = 38,
+      width = .55,
+      height = 0,
+      alpha = 0.90) +
+    scale_color_identity() +
+    # scale_y_discrete(limits = rev) +
+    coord_cartesian(clip = &amp;quot;off&amp;quot;,
+                    xlim = c(0.952, 1.058),
+                    ylim = c(-11.5, 208)
+                    ) +
+    theme_minimal() +
+    theme(axis.title = element_blank(),
+          axis.text.x = element_blank(),
+          panel.grid = element_blank(),
+          axis.text.y = element_blank(),
+          plot.background = element_rect(fill = dutch_white,
+                                         colour = NA))
+})
+## [[1]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-1.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[2]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-2.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[3]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-3.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-4.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-5.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[6]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-6.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[7]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-7.png&#34; width=&#34;2100&#34; /&gt;
+&lt;h2 id=&#34;gradient-dots-with-bars&#34;&gt;Gradient dots with bars&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24602)
+
+split_palette_bubble &amp;lt;- create_palette_ramp(200) %&amp;gt;% 
+  filter(family != &amp;quot;white&amp;quot;) %&amp;gt;%
+  arrange(family, -level) %&amp;gt;% 
+  group_by(family) %&amp;gt;% 
+  group_split()
+
+
+purrr::map(split_palette_bubble, function(x){
+  max_level = max(x$level)
+  ggplot(x,
+         aes(x = family,
+             y = level,
+             color = code)) +
+    geom_jitter(
+      size = 20,
+      width = 0.5,
+      height = 0.2,
+      alpha = 0.5) +
+    scale_color_identity() +
+    geom_hline(yintercept = max_level * 0.55,
+               color = x$code[max_level * 0.45],
+               size = 8) +
+    geom_hline(yintercept = max_level * 0.5,
+               color = x$code[max_level * 0.5],
+               size = 10) +
+    geom_hline(yintercept = max_level * 0.45,
+               color = x$code[max_level * 0.55],
+               size = 8) +
+    coord_cartesian(clip = &amp;quot;off&amp;quot;,
+                    # xlim = c(-0.2, 0.2),
+                    ylim = c(-5, 205)) +
+    theme_minimal() +
+    theme(axis.title = element_blank(),
+          axis.text.x = element_blank(),
+          panel.grid = element_blank(),
+          axis.text.y = element_blank(),
+          plot.background = element_rect(fill = x$code[max_level * 0.5],
+                                         colour = NA))
+})
+## [[1]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-1.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[2]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-2.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[3]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-3.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-4.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[5]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-5.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[6]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-6.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## [[7]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-7.png&#34; width=&#34;2100&#34; /&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24601)
+
+select_pal &amp;lt;- create_palette_ramp(400) %&amp;gt;% 
+  filter(family %in% c(&amp;quot;brick&amp;quot;,
+                       &amp;quot;clay&amp;quot;,
+                       &amp;quot;acorn&amp;quot;
+                       # &amp;quot;taupe&amp;quot;
+  )) %&amp;gt;% 
+  arrange(family, level)
+
+p &amp;lt;- ggplot(select_pal,
+            aes(y = family,
+                x = level,
+                color = code)) +
+  geom_jitter(
+    size = 38,
+    height = .45,
+    width = 0,
+    alpha = 0.90) +
+  scale_color_identity() +
+  scale_y_discrete(limits = rev) +
+  coord_cartesian(clip = &amp;quot;off&amp;quot;) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text.x = element_blank(),
+        panel.grid = element_blank(),
+        axis.text.y = element_blank(),
+        plot.background = element_rect(fill = dutch_white,
+                                       colour = NA))
+
+p + (p + scale_x_reverse())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/combined-gradient-1.png&#34; width=&#34;2100&#34; /&gt;
+&lt;h2 id=&#34;watercolor-style-abstracts&#34;&gt;Watercolor-style abstracts&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(file = &amp;quot;data/seed_state.RData&amp;quot;)
+wat &amp;lt;- canvas_watercolors(colors = c(acorn(1),
+                                     brick(1),
+                                     clay(1),
+                                     acorn(1),
+                                     brick(2),
+                                     clay(3)),
+                          background = dutch_white,
+                          layers = 20,
+                          resolution = 300,
+                          depth = 5)
+
+wat +
+  coord_cartesian(ylim = c(100,200),
+                  xlim = c(75,175))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/watercolor-plot-1.png&#34; width=&#34;2100&#34; /&gt;
+</description>
+    </item>
     
     <item>
       <title>Radial rtistry</title>
