@@ -33,7 +33,7 @@ image:
 
 ## Color palette
 
-I'm having a moment with linen, so I decided to make my color palette for my rstudio conference talk [a link here]() match my handmade garments.  
+I'm having a moment with linen, so I decided to make my color palette for my rstudio conference talk match some of my favorite hues.  
 
 Colors based on [`{dutchmasters}`](https://github.com/EdwinTh/dutchmasters), semi.joan's [instagram](https://www.instagram.com/semi.joan/), and Blackbird Fabrics collection of [linen](https://www.blackbirdfabrics.com/en-us/collections/linen).  
 
@@ -110,7 +110,7 @@ ggplot(palette_ramp50,
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/palette-display-1.png" width="2100" />
 
-## Gradients with dots
+## Gradient bubbles  
 
 Notice `{purrr}` use to generate a plot for each color all at once. 
 
@@ -140,7 +140,7 @@ purrr::map(split_palette, function(x){
     coord_cartesian(clip = "off",
                     xlim = c(0.952, 1.058),
                     ylim = c(-11.5, 208)
-                    ) +
+    ) +
     theme_minimal() +
     theme(axis.title = element_blank(),
           axis.text.x = element_blank(),
@@ -196,7 +196,7 @@ purrr::map(split_palette, function(x){
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/single-gradients-7.png" width="2100" />
 
-## Gradient dots with bars
+## Gradient bubbles with bars  
 
 
 ```r
@@ -348,6 +348,5 @@ wat +
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/watercolor-plot-1.png" width="2100" />
-
 
 
