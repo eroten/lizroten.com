@@ -355,7 +355,7 @@
         content="2022-07-05T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-07-05T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-07-05T12:35:13-05:00">
   
 
   
@@ -388,7 +388,7 @@
   ],
   
   "datePublished": "2022-07-05T00:00:00Z",
-  "dateModified": "2022-07-05T00:00:00Z",
+  "dateModified": "2022-07-05T12:35:13-05:00",
   
   "author": {
     "@type": "Person",
@@ -713,8 +713,8 @@
           <nav id="TableOfContents">
   <ul>
     <li><a href="#color-palette">Color palette</a></li>
-    <li><a href="#gradients-with-dots">Gradients with dots</a></li>
-    <li><a href="#gradient-dots-with-bars">Gradient dots with bars</a></li>
+    <li><a href="#gradient-bubbles">Gradient bubbles</a></li>
+    <li><a href="#gradient-bubbles-with-bars">Gradient bubbles with bars</a></li>
     <li><a href="#watercolor-style-abstracts">Watercolor-style abstracts</a></li>
   </ul>
 </nav>
@@ -769,6 +769,7 @@
     
     
       
+      
     
     July 7, 2022
   </span>
@@ -816,7 +817,7 @@
           <div class="article-container">
             <div class="article-style">
               <h2 id="color-palette">Color palette</h2>
-<p>I&rsquo;m having a moment with linen, so I decided to make my color palette for my rstudio conference talk <a href="">a link here</a> match my handmade garments.</p>
+<p>I&rsquo;m having a moment with linen, so I decided to make my color palette for my rstudio conference talk match some of my favorite hues.</p>
 <p>Colors based on <a href="https://github.com/EdwinTh/dutchmasters" target="_blank" rel="noopener"><code>{dutchmasters}</code></a>, semi.joan&rsquo;s <a href="https://www.instagram.com/semi.joan/" target="_blank" rel="noopener">instagram</a>, and Blackbird Fabrics collection of <a href="https://www.blackbirdfabrics.com/en-us/collections/linen" target="_blank" rel="noopener">linen</a>.</p>
 <pre><code class="language-r">dutch_white &lt;- dutchmasters$pearl_earring[&quot;white(colar)&quot;]
 
@@ -879,7 +880,7 @@ palette_ramp50 &lt;- create_palette_ramp()
         axis.text.y = element_text(hjust = 0))
 </code></pre>
 <img src="https://lizroten.com/post/color-palette-exploration/index_files/figure-html/palette-display-1.png" width="2100" />
-<h2 id="gradients-with-dots">Gradients with dots</h2>
+<h2 id="gradient-bubbles">Gradient bubbles</h2>
 <p>Notice <code>{purrr}</code> use to generate a plot for each color all at once.</p>
 <pre><code class="language-r">set.seed(24601)
 
@@ -905,7 +906,7 @@ purrr::map(split_palette, function(x){
     coord_cartesian(clip = &quot;off&quot;,
                     xlim = c(0.952, 1.058),
                     ylim = c(-11.5, 208)
-                    ) +
+    ) +
     theme_minimal() +
     theme(axis.title = element_blank(),
           axis.text.x = element_blank(),
@@ -941,7 +942,7 @@ purrr::map(split_palette, function(x){
 ## [[7]]
 </code></pre>
 <img src="https://lizroten.com/post/color-palette-exploration/index_files/figure-html/single-gradients-7.png" width="2100" />
-<h2 id="gradient-dots-with-bars">Gradient dots with bars</h2>
+<h2 id="gradient-bubbles-with-bars">Gradient bubbles with bars</h2>
 <pre><code class="language-r">set.seed(24602)
 
 split_palette_bubble &lt;- create_palette_ramp(200) %&gt;% 
