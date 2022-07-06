@@ -121,7 +121,7 @@ create_palette_ramp <- function(x = 50) {
 palette_ramp50 <- create_palette_ramp()
 ```
 
-```{r palette-display, dpi=300}
+```{r palette-display, dpi=300, fig.height=7.5}
 ggplot(
   palette_ramp50,
   aes(
