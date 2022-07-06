@@ -4,10 +4,10 @@ author: Liz Roten
 date: '2020-02-15'
 slug: housing-density-in-us-cities
 categories:
-  - tutorial
+  - plots with code
 tags:
   - ggplot2
-  - tutorial
+  - plots with code
   - spatial
   - maps
   - sf

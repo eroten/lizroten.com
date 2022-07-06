@@ -4,7 +4,7 @@ author: admin
 date: '2020-12-19'
 slug: maps-with-edgebundle
 categories:
-  - tutorial
+  - plots with code
   - cartography
 tags:
   - ggplot2
