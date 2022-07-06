@@ -4,3 +4,7 @@ tibble
 dplyr
 patchwork
 aRtsy
+fs
+sysfonts
+showtextdb
+showtext
