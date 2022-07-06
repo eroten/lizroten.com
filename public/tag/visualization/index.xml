@@ -32,89 +32,126 @@ taupe &amp;lt;- colorRampPalette(c(&amp;quot;#BFB3A4&amp;quot;, dutch_white))
 
 acorn &amp;lt;- colorRampPalette(c(&amp;quot;#BF895A&amp;quot;, dutch_white))
 
-seaweed &amp;lt;- colorRampPalette(c(&amp;quot;#262001&amp;quot;, dutch_white)) 
+seaweed &amp;lt;- colorRampPalette(c(&amp;quot;#262001&amp;quot;, dutch_white))
 
 noil_black &amp;lt;- colorRampPalette(c(&amp;quot;#0D0D0D&amp;quot;, dutch_white))
 
 white &amp;lt;- colorRampPalette(c(dutch_white, &amp;quot;#FFFFFF&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Function to create palette ramp with a set number of levels.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;create_palette_ramp &amp;lt;- function(x = 50){
-  
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;create_palette_ramp &amp;lt;- function(x = 50) {
   tibble::tibble(
-    family = c(rep(&amp;quot;brick&amp;quot;, x),
-               rep(&amp;quot;midnight&amp;quot;, x),
-               rep(&amp;quot;clay&amp;quot;, x),
-               rep(&amp;quot;taupe&amp;quot;, x),
-               rep(&amp;quot;acorn&amp;quot;, x),
-               rep(&amp;quot;noil_black&amp;quot;, x),
-               rep(&amp;quot;white&amp;quot;, x),
-               rep(&amp;quot;seaweed&amp;quot;, x)),
+    family = c(
+      rep(&amp;quot;brick&amp;quot;, x),
+      rep(&amp;quot;midnight&amp;quot;, x),
+      rep(&amp;quot;clay&amp;quot;, x),
+      rep(&amp;quot;taupe&amp;quot;, x),
+      rep(&amp;quot;acorn&amp;quot;, x),
+      rep(&amp;quot;noil_black&amp;quot;, x),
+      rep(&amp;quot;white&amp;quot;, x),
+      rep(&amp;quot;seaweed&amp;quot;, x)
+    ),
     level = c(rep(1:x, 8)),
-    code = c(brick(x),
-             midnight(x),
-             clay(x),
-             taupe(x),
-             acorn(x),
-             noil_black(x),
-             white(x),
-             seaweed(x))
-  ) %&amp;gt;% 
+    code = c(
+      brick(x),
+      midnight(x),
+      clay(x),
+      taupe(x),
+      acorn(x),
+      noil_black(x),
+      white(x),
+      seaweed(x)
+    )
+  ) %&amp;gt;%
     dplyr::arrange(-level)
 }
 
 palette_ramp50 &amp;lt;- create_palette_ramp()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(palette_ramp50,
-       aes(x = level,
-           y = family,
-           color = code)) +
-  geom_point(size = 18.4,
-             shape = 15) +
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(
+  palette_ramp50,
+  aes(
+    x = level,
+    y = family,
+    color = code
+  )
+) +
+  geom_point(
+    size = 25.4,
+    shape = 15
+  ) +
   scale_color_identity() +
   scale_y_discrete(limits = rev) +
-  labs(title = &amp;quot;Color palette&amp;quot;) +
+  labs(
+    title = &amp;quot;Color palette&amp;quot;,
+    caption = my_caption
+  ) +
   theme_minimal() +
-  theme(axis.title = element_blank(),
-        axis.text.x = element_blank(),
-        panel.grid = element_blank(),
-        axis.text.y = element_text(hjust = 0))
+  theme(
+    axis.title = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_text(size = 40, hjust = 0),
+    plot.title = element_text(size = 50),
+    panel.grid = element_blank(),
+    plot.caption = element_text(family = &amp;quot;Nunito&amp;quot;,
+                                size = 25)
+  )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/palette-display-1.png&#34; width=&#34;2100&#34; /&gt;
 &lt;h2 id=&#34;gradient-bubbles&#34;&gt;Gradient bubbles&lt;/h2&gt;
 &lt;p&gt;Notice &lt;code&gt;{purrr}&lt;/code&gt; use to generate a plot for each color all at once.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24601)
 
-split_palette &amp;lt;- create_palette_ramp(200) %&amp;gt;% 
+split_palette &amp;lt;- create_palette_ramp(200) %&amp;gt;%
   filter(family != &amp;quot;white&amp;quot;) %&amp;gt;%
-  arrange(family, -level) %&amp;gt;% 
-  group_by(family) %&amp;gt;% 
+  arrange(family, -level) %&amp;gt;%
+  group_by(family) %&amp;gt;%
   group_split()
 
 
-purrr::map(split_palette, function(x){
-  p &amp;lt;- ggplot(x,
-              aes(x = family,
-                  y = level,
-                  color = code)) +
+purrr::map(split_palette, function(x) {
+  p &amp;lt;- ggplot(
+    x,
+    aes(
+      x = family,
+      y = level,
+      color = code
+    )
+  ) +
     geom_jitter(
       size = 38,
       width = .55,
       height = 0,
-      alpha = 0.90) +
+      alpha = 0.90
+    ) +
     scale_color_identity() +
     # scale_y_discrete(limits = rev) +
-    coord_cartesian(clip = &amp;quot;off&amp;quot;,
-                    xlim = c(0.952, 1.058),
-                    ylim = c(-11.5, 208)
+    coord_cartesian(
+      clip = &amp;quot;off&amp;quot;,
+      xlim = c(0.952, 1.058),
+      ylim = c(-11.5, 208)
     ) +
+    labs(caption = my_caption) +
     theme_minimal() +
-    theme(axis.title = element_blank(),
-          axis.text.x = element_blank(),
-          panel.grid = element_blank(),
-          axis.text.y = element_blank(),
-          plot.background = element_rect(fill = dutch_white,
-                                         colour = NA))
+    theme(
+      axis.title = element_blank(),
+      axis.text.x = element_blank(),
+      panel.grid = element_blank(),
+      axis.text.y = element_blank(),
+      plot.caption = element_text(
+        family = &amp;quot;Nunito&amp;quot;,
+        size = 25,
+        color = noil_black(1),
+        vjust = -1,
+        margin = margin(10, 0, 0, 0, &amp;quot;pt&amp;quot;)
+      ),
+      plot.caption.position = &amp;quot;plot&amp;quot;,
+      plot.margin = margin(5, 5, 10, 5, &amp;quot;pt&amp;quot;),
+      plot.background = element_rect(
+        fill = dutch_white,
+        colour = NA
+      )
+    )
 })
 ## [[1]]
 &lt;/code&gt;&lt;/pre&gt;
@@ -146,44 +183,73 @@ purrr::map(split_palette, function(x){
 &lt;h2 id=&#34;gradient-bubbles-with-bars&#34;&gt;Gradient bubbles with bars&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24602)
 
-split_palette_bubble &amp;lt;- create_palette_ramp(200) %&amp;gt;% 
+split_palette_bubble &amp;lt;- create_palette_ramp(200) %&amp;gt;%
   filter(family != &amp;quot;white&amp;quot;) %&amp;gt;%
-  arrange(family, -level) %&amp;gt;% 
-  group_by(family) %&amp;gt;% 
+  arrange(family, -level) %&amp;gt;%
+  group_by(family) %&amp;gt;%
   group_split()
 
 
-purrr::map(split_palette_bubble, function(x){
-  max_level = max(x$level)
-  ggplot(x,
-         aes(x = family,
-             y = level,
-             color = code)) +
+purrr::map(split_palette_bubble, function(x) {
+  max_level &amp;lt;- max(x$level)
+  ggplot(
+    x,
+    aes(
+      x = family,
+      y = level,
+      color = code
+    )
+  ) +
     geom_jitter(
-      size = 20,
+      size = 25,
       width = 0.5,
       height = 0.2,
-      alpha = 0.5) +
+      alpha = 0.5
+    ) +
     scale_color_identity() +
-    geom_hline(yintercept = max_level * 0.55,
-               color = x$code[max_level * 0.45],
-               size = 8) +
-    geom_hline(yintercept = max_level * 0.5,
-               color = x$code[max_level * 0.5],
-               size = 10) +
-    geom_hline(yintercept = max_level * 0.45,
-               color = x$code[max_level * 0.55],
-               size = 8) +
-    coord_cartesian(clip = &amp;quot;off&amp;quot;,
-                    # xlim = c(-0.2, 0.2),
-                    ylim = c(-5, 205)) +
+    geom_hline(
+      yintercept = max_level * 0.55,
+      color = x$code[max_level * 0.45],
+      size = 8
+    ) +
+    geom_hline(
+      yintercept = max_level * 0.5,
+      color = x$code[max_level * 0.5],
+      size = 10
+    ) +
+    geom_hline(
+      yintercept = max_level * 0.45,
+      color = x$code[max_level * 0.55],
+      size = 8
+    ) +
+    coord_cartesian(
+      clip = &amp;quot;off&amp;quot;,
+      # xlim = c(-0.2, 0.2),
+      ylim = c(-5, 205)
+    ) +
+    labs(caption = my_caption) +
     theme_minimal() +
-    theme(axis.title = element_blank(),
-          axis.text.x = element_blank(),
-          panel.grid = element_blank(),
-          axis.text.y = element_blank(),
-          plot.background = element_rect(fill = x$code[max_level * 0.5],
-                                         colour = NA))
+    theme(
+      axis.title = element_blank(),
+      axis.text.x = element_blank(),
+      panel.grid = element_blank(),
+      axis.text.y = element_blank(),
+      plot.background = element_rect(
+        fill = x$code[max_level * 0.5],
+        colour = NA
+      ),
+      plot.caption = element_text(
+        family = &amp;quot;Nunito&amp;quot;, size = 25,
+        color = ifelse(unique(x$family) %in% c(
+          &amp;quot;acorn&amp;quot;,
+          &amp;quot;taupe&amp;quot;
+        ), &amp;quot;black&amp;quot;, &amp;quot;white&amp;quot;),
+        vjust = -1,
+        margin = margin(10, 0, 0, 0, &amp;quot;pt&amp;quot;)
+      ),
+      plot.caption.position = &amp;quot;plot&amp;quot;,
+      plot.margin = margin(5, 5, 10, 5, &amp;quot;pt&amp;quot;)
+    )
 })
 ## [[1]]
 &lt;/code&gt;&lt;/pre&gt;
@@ -212,55 +278,95 @@ purrr::map(split_palette_bubble, function(x){
 ## [[7]]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/bubble-bar-gradients-7.png&#34; width=&#34;2100&#34; /&gt;
+&lt;h2 id=&#34;diverging-bubbles&#34;&gt;Diverging bubbles&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(24601)
 
-select_pal &amp;lt;- create_palette_ramp(400) %&amp;gt;% 
-  filter(family %in% c(&amp;quot;brick&amp;quot;,
-                       &amp;quot;clay&amp;quot;,
-                       &amp;quot;acorn&amp;quot;
-                       # &amp;quot;taupe&amp;quot;
-  )) %&amp;gt;% 
+select_pal &amp;lt;- create_palette_ramp(400) %&amp;gt;%
+  filter(family %in% c(
+    &amp;quot;brick&amp;quot;,
+    &amp;quot;clay&amp;quot;,
+    &amp;quot;acorn&amp;quot;
+    # &amp;quot;taupe&amp;quot;
+  )) %&amp;gt;%
   arrange(family, level)
 
-p &amp;lt;- ggplot(select_pal,
-            aes(y = family,
-                x = level,
-                color = code)) +
+p &amp;lt;- ggplot(
+  select_pal,
+  aes(
+    y = family,
+    x = level,
+    color = code
+  )
+) +
   geom_jitter(
     size = 38,
     height = .45,
     width = 0,
-    alpha = 0.90) +
+    alpha = 0.90
+  ) +
   scale_color_identity() +
   scale_y_discrete(limits = rev) +
   coord_cartesian(clip = &amp;quot;off&amp;quot;) +
   theme_minimal() +
-  theme(axis.title = element_blank(),
-        axis.text.x = element_blank(),
-        panel.grid = element_blank(),
-        axis.text.y = element_blank(),
-        plot.background = element_rect(fill = dutch_white,
-                                       colour = NA))
+  theme(
+    axis.title = element_blank(),
+    axis.text.x = element_blank(),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    plot.background = element_rect(
+      fill = dutch_white,
+      colour = NA
+    )
+  )
 
-p + (p + scale_x_reverse())
+p + (p + scale_x_reverse()) +
+  labs(caption = my_caption) +
+  theme(
+    plot.caption = element_text(
+      family = &amp;quot;Nunito&amp;quot;,
+      size = 25,
+      color = &amp;quot;black&amp;quot;,
+      vjust = -1,
+      margin = margin(15, 0, 0, 0, &amp;quot;pt&amp;quot;)
+    ),
+    plot.caption.position = &amp;quot;plot&amp;quot;,
+    plot.margin = margin(5, 5, 10, 5, &amp;quot;pt&amp;quot;)
+  )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/combined-gradient-1.png&#34; width=&#34;2100&#34; /&gt;
 &lt;h2 id=&#34;watercolor-style-abstracts&#34;&gt;Watercolor-style abstracts&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(file = &amp;quot;data/seed_state.RData&amp;quot;)
-wat &amp;lt;- canvas_watercolors(colors = c(acorn(1),
-                                     brick(1),
-                                     clay(1),
-                                     acorn(1),
-                                     brick(2),
-                                     clay(3)),
-                          background = dutch_white,
-                          layers = 20,
-                          resolution = 300,
-                          depth = 5)
-
-wat +
-  coord_cartesian(ylim = c(100,200),
-                  xlim = c(75,175))
+wat &amp;lt;- canvas_watercolors(
+  colors = c(
+    acorn(1),
+    brick(1),
+    clay(1),
+    acorn(1),
+    brick(2),
+    clay(3)
+  ),
+  background = dutch_white,
+  layers = 20,
+  resolution = 300,
+  depth = 5
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wat +
+  coord_cartesian(
+    ylim = c(100, 200),
+    xlim = c(75, 175)
+  ) +
+  labs(caption = my_caption) +
+  theme(
+    plot.caption = element_text(
+      family = &amp;quot;Nunito&amp;quot;, size = 25,
+      color = &amp;quot;black&amp;quot;,
+      vjust = -1,
+      margin = margin(0, 2, 0, 0, &amp;quot;pt&amp;quot;)
+    ),
+    plot.caption.position = &amp;quot;plot&amp;quot;,
+    plot.margin = margin(0, 0, 8, 0, &amp;quot;pt&amp;quot;)
+  )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;img src=&#34;https://lizroten.com/post/color-palette-exploration/index_files/figure-html/watercolor-plot-1.png&#34; width=&#34;2100&#34; /&gt;
 </description>
