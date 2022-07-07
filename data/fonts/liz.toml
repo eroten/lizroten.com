@@ -2,7 +2,7 @@
 name = "Liz"
 
 # Optional Google font URL
-google_fonts = "family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito"
+google_fonts = "family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Roboto+Mono&family=Poppins:wght@300;700&family=Nunito"
 
 # Font families
 heading_font = "Cormorant Garamond"
