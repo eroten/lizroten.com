@@ -4,13 +4,31 @@
   
   
   <url>
-    <loc>https://lizroten.com/courses/example/python/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/courses/example/visualization/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/courses/example/stats/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
-  <url>
     <loc>https://lizroten.com/tag/artsy/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/categories/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/post/color-palette-exploration/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/dutchmasters/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/ggplot2/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/patchwork/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/category/plots-with-code/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/purrr/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/rtistry/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tags/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/tibble/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/tidyverse/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/visualization/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/cartography/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -22,7 +40,7 @@
   <url>
     <loc>https://lizroten.com/tag/interactive/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/metropolitan-council/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/metropolitan-council/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/project/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -36,23 +54,13 @@
   <url>
     <loc>https://lizroten.com/tag/spatial-operations/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/streetlight-data/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/streetlight-data/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/tableau/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tags/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
     <loc>https://lizroten.com/tag/transportation/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/visualization/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/categories/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/ggplot2/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
     <loc>https://lizroten.com/post/rtistry-with-contour/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/rtistry/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/category/tutorial/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -62,7 +70,7 @@
   <url>
     <loc>https://lizroten.com/post/make-a-neat-header/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/parks/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/parks/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/blog/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -100,31 +108,27 @@
   <url>
     <loc>https://lizroten.com/tag/personal/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/project/tc-sensors/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
     <loc>https://lizroten.com/post/maps-with-edgebundle/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/tidyverse/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/author/ashley-asmus/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/author/ashley-asmus/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/authors/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/authors/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/author/catherine-manzo/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/author/catherine-manzo/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/climate/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/climate/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/conference/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/conference/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/covid/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/covid/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/author/jonathan-ehrlich/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/author/jonathan-ehrlich/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/author/mauricio-leon/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/author/mauricio-leon/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/talk/ampo-covid-traffic/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/talk/ampo-covid-traffic/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/talk/ampo-streetlight-ghg/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/talk/ampo-streetlight-ghg/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/housing/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -154,11 +158,11 @@
   <url>
     <loc>https://lizroten.com/post/fisk-s-mississippi-river-meander-in-r/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/talk/wilmds-streetlight-parks/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/talk/wilmds-streetlight-parks/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/project/como-hex-streetlight-parks/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/talk/tcrg-streetlight-parks/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/talk/tcrg-streetlight-parks/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/publication-type/3/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
   <url>
@@ -167,10 +171,6 @@
     <loc>https://lizroten.com/publication_types/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/source-themes/</loc><lastmod>2022-04-16T13:55:58-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/slides/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/slides/example/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/bivariate-choropleth/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
