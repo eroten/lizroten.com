@@ -1,6 +1,3 @@
-[submodule "static/slides/rstudioconf22-oddly-satisfying"]
-	path = static/slides/rstudioconf22-oddly-satisfying
-	url = git@github.com:eroten/rstudioconf22-oddly-satisfying.git
 [submodule "static/oddly"]
 	path = static/oddly
 	url = git@github.com:eroten/rstudioconf22-oddly-satisfying.git
