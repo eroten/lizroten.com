@@ -1,6 +1,6 @@
 (() => {
   // ns-params:@params
-  var slides = null;
+  var slides = { highlight_style: "dracula", theme: "black" };
 
   // ns-hugo:A:\blog_folder\lizroten.com\themes\github.com\wowchemy\wowchemy-hugo-modules\wowchemy\v5\assets\js\wowchemy-utils.js
   function fixMermaid(render = false) {
