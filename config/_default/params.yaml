@@ -79,7 +79,7 @@ edit_page:
   repo_branch: main
   editable:
     page: false
-    post: false
+    post: true
     book: false
 show_related:
   book: false
