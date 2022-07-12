@@ -5,7 +5,7 @@ event: Multiple
 
 # date: "2020-10-281T13:00:00Z"
 
-# summary: An example talk using Academic's Markdown slides feature.
+summary: To address the scarcity of transportation emissions data in Minnesota, the Metropolitan Council of the Twin Cities has developed greenhouse gas emission estimates for transportation and land for cities, townships, and counties of the Twin Cities Metropolitan Region.
 abstract: "It’s one thing to know that transportation is a significant cause of greenhouse gas emissions — it’s another to quantify how much. To address the scarcity of transportation emissions data in Minnesota, the Metropolitan Council of the Twin Cities has developed greenhouse gas emission estimates for transportation and land for cities, townships, and counties of the Twin Cities Metropolitan Region. This session will demonstrate how to leverage big data to centralize this type of research, save public funding, and enable communities to focus their efforts on implementing strategies to become more sustainable."
 
 # Talk start and end times.
@@ -32,6 +32,10 @@ links:
   icon_pack: fa
   name: Slides
   url: slides/ampo-streetlight-ghg.pdf
+- icon: folder
+  icon_pack: fas
+  name: Project
+  url: project/greenhouse-gas-inventory
 url_code: ""
 # url_pdf: "slides/ampo-streetlight-ghg.pdf"
 # url_slides: "slides/ampo-streetlight-ghg/"
@@ -49,7 +53,7 @@ url_video: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["greenhouse-gas-inventory"]
+# projects: ["greenhouse-gas-inventory"]
 
 # Enable math on this page?
 math: false
