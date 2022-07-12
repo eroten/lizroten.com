@@ -13,7 +13,7 @@ address:
 
 date: "2019-06-08"
 
-# summary: An example talk using Academic's Markdown slides feature.
+summary: StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks. 
 abstract: "StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks. We will cover topics including inferring traveler demographics -- such as race, income, education, and family status -- and limitations of the data. Finally, we will explore interactive visualizations using this powerful data source."
 
 # Talk start and end times.
@@ -40,6 +40,10 @@ links:
   icon_pack: fa
   name: Slides
   url: slides/tcrg-streetlight-parks.pdf
+- icon: folder
+  icon_pack: fas
+  name: Project
+  url: project/como-hex-streetlight-parks
 - icon: calendar-day
   icon_pack: fa
   name: EventBrite
@@ -61,7 +65,7 @@ url_video: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["como-hex-streetlight-parks"]
+# projects: ["como-hex-streetlight-parks"]
 
 # Enable math on this page?
 math: false

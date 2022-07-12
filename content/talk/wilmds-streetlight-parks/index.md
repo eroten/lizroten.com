@@ -1,7 +1,7 @@
 ---
 title: Using location-based services to locate high activity areas within Twin Cities regional parks 
 event: Data Science at the Metropolitan Council, co-hosted by 'Minneapolis Women in Machine Learning and Data Science' and 'R-Ladies Twin Cities'  
-event_url: https://www.meetup.com/minneapolis-wimlds/events/264788498/
+event_url: https://www.meetup.com/minneapolis-wimlds/events/264788498?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link
 
 location: Metropolitan Council
 address:
@@ -13,8 +13,8 @@ address:
 
 # date: "2020-10-281T13:00:00Z"
 
-# summary: An example talk using Academic's Markdown slides feature.
-abstract: "It’s one thing to know that transportation is a significant cause of greenhouse gas emissions — it’s another to quantify how much. To address the scarcity of transportation emissions data in Minnesota, the Metropolitan Council of the Twin Cities has developed greenhouse gas emission estimates for transportation and land for cities, townships, and counties of the Twin Cities Metropolitan Region. This session will demonstrate how to leverage big data to centralize this type of research, save public funding, and enable communities to focus their efforts on implementing strategies to become more sustainable."
+summary: StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks, with particuar focus on novel geospatial processing and statisitical methods. 
+abstract: "StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks. We will cover topics including inferring traveler demographics -- such as race, income, education, and family status -- and limitations of the data. Finally, we will explore interactive visualizations using this powerful data source."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -44,6 +44,10 @@ links:
   icon_pack: fab
   name: Meetup
   url: https://www.meetup.com/minneapolis-wimlds/events/264788498/
+- icon: folder
+  icon_pack: fas
+  name: Project
+  url: project/como-hex-streetlight-parks
 url_code: ""
 # url_pdf: "slides/ampo-streetlight-ghg.pdf"
 # url_slides: "slides/ampo-streetlight-ghg/"
@@ -61,7 +65,7 @@ url_video: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["como-hex-streetlight-parks"]
+# projects: ["como-hex-streetlight-parks"]
 
 # Enable math on this page?
 math: false

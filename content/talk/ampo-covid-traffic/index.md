@@ -7,7 +7,7 @@ event_url: https://ampo.org/events/2020-ampo-annual-conference/
 
 # summary: An example talk using Academic's Markdown slides feature.
 abstract: "To estimate public adherence to social distancing guidelines during the Coronavirus outbreak, we analyzed departures from “typical” traffic volumes on the metro freeway system of the Twin Cities region. A robust modeling approach, open-source code repository, and web-based dashboard for interacting with the data are assisting decision makers in Minnesota as they update social distancing guidelines and monitor economic recovery."
-
+summary: To estimate public adherence to social distancing guidelines during the Coronavirus outbreak, we analyzed departures from “typical” traffic volumes on the metro freeway system of the Twin Cities region.
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2020-10-28"
@@ -36,6 +36,10 @@ links:
   icon_pack: fab
   name: Code
   url: https://github.com/Metropolitan-Council/loop-sensor-trends/tree/master/covid.traffic.trends
+- icon: folder
+  icon-pack: fab
+  name: Project
+  url: project/covid-traffic-trends
 url_code: ""
 # url_pdf: "slides/ampo-streetlight-ghg.pdf"
 # url_slides: "slides/ampo-streetlight-ghg/"
@@ -53,7 +57,7 @@ url_video: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["covid-traffic-trends"]
+# projects: ["covid-traffic-trends"]
 
 # Enable math on this page?
 math: false
