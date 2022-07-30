@@ -1,0 +1,157 @@
+---
+title: "Liz Roten's CV"
+author: Liz Roten
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+# remotes::install_github("nstrayer/datadrivencv#86")
+# remotes::install_github("mitchelloharawild/icons")
+
+library(magrittr) # For the pipe
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "data/",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+datadrivencv::build_network_logo(CV$entries_data)
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_contact_info()
+```
+
+```{r}
+if(params$pdf_mode){
+  cat("View this CV online with links at _lizroten.com_")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/eroten/cv/raw/master/cv.pdf)")
+}
+```
+
+Technical Skills {#skills}
+--------------------------------------------------------------------------------
+- R  
+- R Shiny
+- HTML/CSS  
+- Tableau  
+- Adobe Illustrator  
+- VS Code  
+- JavaScript  
+- Git/GitHub  
+- ESRI Products  
+
+
+
+Open Source Contributions {#open-source}
+--------------------------------------------------------------------------------
+
+- [`tc.sensors`](https://github.com/Metropolitan-Council/tc.sensors): R package for pulling data from thousands of traffic sensors across the metro.   
+- [`councilR`](https://github.com/Metropolitan-Council/councilR): Organization specific package for consistent style and data practices.  
+
+Main
+================================================================================
+
+Liz Roten {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+
+Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+# CV %<>% print_text_block('industy_experience_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('industry_positions')
+```
+
+
+Selected projects and talks{data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('projects_talks')
+```
+
+<!-- These breaks just force a new page so section doesn't get cut off -->
+<br>
+<br>
+<br>
+
+
+Selected Data Science Writing {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% print_text_block('data_science_writing_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('data_science_writings')
+```
+
+
+```{r}
+CV %<>% print_links()
+```
+
