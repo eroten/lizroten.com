@@ -1,3 +1,6 @@
 [submodule "static/slides/rstudioconf22-oddly-satisfying"]
 	path = static/slides/rstudioconf22-oddly-satisfying
 	url = https://github.com/eroten/rstudioconf22-oddly-satisfying.git
+[submodule "static/cv"]
+	path = static/cv
+	url = https://github.com/eroten/cv.git
