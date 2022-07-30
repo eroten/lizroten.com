@@ -3,7 +3,7 @@ title: Oddly Satisfying
 subtitle: Find delight in the mundane
 event: RStudio Conf 2022
 event_url: https://sched.co/11iYl
-date: "July 27, 2022"
+date: 2022-07-27
 url: "/oddly"
 location: Gaylord National Resort & Convention Center
 address:
