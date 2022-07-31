@@ -2,6 +2,7 @@ Where in your CV this entry belongs,Main title of the entry,Location the entry o
 section,title,loc,institution,start,end,date,description_1,description_2,description_3,in_resume
 projects_talks,[Oddly Satisyfing - Find delight in the mundane](https://www.lizroten.com/oddly/),rstudio::conf(2022),"Washington, D.C.",,,7/27/22,How to take a project you hate and turn it into something you love,,,TRUE
 data_science_writings,[Color Palette Exploration](https://www.lizroten.com/post/color-palette-exploration/),lizroten.com,,,,7/5/22,Color palette exploration with ggplot2 and generative methods,,,TRUE
+projects_talks,[COVID-19 Surveillance at the Metro Plant](https://lizroten.com/project/covid-poops/),Metropolitan Council,"St. Paul, MN",,,2/1/22,Open source project and R Shiny app,,,TRUE
 projects_talks,[Regional Truck Corridor Study](https://www.lizroten.com/project/truck-corridor-study/),Metropolitan Council,"St. Paul, MN",,,12/31/21,Making a legacy project reproducible,,,TRUE
 data_science_writings,[Radial rtistry](https://www.lizroten.com/post/rtistry-with-contour/),lizroten.com,,,,4/2/21,Generative art with ggplot2,,,TRUE
 projects_talks,[Regional Parks and the American Community Survey](https://metrotransitmn.shinyapps.io/regional-parks-acs/),Metropolitan Council,"St. Paul, MN",,,3/25/21,Interactive visualization displaying regional parks and trails in context with American Community Survey (ACS) demographic data,,,TRUE

@@ -8,13 +8,13 @@
   <url>
     <loc>https://lizroten.com/tag/conference/</loc><lastmod>2022-07-30T16:48:22-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/metropolitan-council/</loc><lastmod>2022-07-30T16:48:22-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/metropolitan-council/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/oddly/</loc><lastmod>2022-07-30T16:48:22-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/rstudio/</loc><lastmod>2022-07-30T16:48:22-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tags/</loc><lastmod>2022-07-30T16:48:22-05:00</lastmod></url>
+    <loc>https://lizroten.com/tags/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/artsy/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
   <url>
@@ -38,7 +38,25 @@
   <url>
     <loc>https://lizroten.com/tag/tidyverse/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/visualization/</loc><lastmod>2022-07-06T11:56:07-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/visualization/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/covid/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/project/covid-poops/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/github/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/github-actions/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/interactive/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/open-source/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/project/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/shiny/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
+  <url>
+    <loc>https://lizroten.com/tag/version-control/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/cartography/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -47,10 +65,6 @@
     <loc>https://lizroten.com/tag/from-excel-to-r/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/gis/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/interactive/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/project/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/public-data/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -78,7 +92,7 @@
   <url>
     <loc>https://lizroten.com/post/make-a-neat-header/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/parks/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/parks/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/blog/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -86,19 +100,13 @@
   <url>
     <loc>https://lizroten.com/tag/writing/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/tag/github/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/github-actions/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/golem/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/tag/golem/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/packages/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/pkgdown/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
-    <loc>https://lizroten.com/project/regional-parks-acs/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/shiny/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
+    <loc>https://lizroten.com/project/regional-parks-acs/</loc><lastmod>2022-07-30T21:22:16-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/project/councilr-package/</loc><lastmod>2022-06-30T11:43:30-05:00</lastmod></url>
   <url>
@@ -123,8 +131,6 @@
     <loc>https://lizroten.com/author/catherine-manzo/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/tag/climate/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
-  <url>
-    <loc>https://lizroten.com/tag/covid/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
     <loc>https://lizroten.com/author/jonathan-ehrlich/</loc><lastmod>2022-07-12T12:14:34-05:00</lastmod></url>
   <url>
