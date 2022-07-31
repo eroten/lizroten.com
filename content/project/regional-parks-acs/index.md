@@ -23,7 +23,11 @@ links:
   icon_pack: fa
   name: Live App
   url: https://metrotransitmn.shinyapps.io/regional-parks-acs/
-url_code: "https://github.com/Metropolitan-Council/regionalparks.acs"
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/Metropolitan-Council/regionalparks.acs
+url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
