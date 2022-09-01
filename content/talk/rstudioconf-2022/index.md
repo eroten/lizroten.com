@@ -2,7 +2,7 @@
 title: Oddly Satisfying
 subtitle: Find delight in the mundane
 event: RStudio Conf 2022
-event_url: https://sched.co/11iYl
+event_url: https://www.rstudio.com/conference/2022/2022-conf-talks/
 date: 2022-07-27
 url: "/oddly"
 location: Gaylord National Resort & Convention Center
@@ -35,6 +35,10 @@ image:
   focal_point: Smart
 
 links:
+- icon: video
+  icon_pack: fa
+  name: Recording
+  url: https://www.rstudio.com/conference/2022/talks/inheritance-upgrading-legacy-project-making/
 - icon: file-code
   icon_pack: fa
   name: Slides
