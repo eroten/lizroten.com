@@ -25,7 +25,7 @@ all_day: false
 publishDate: "="
 
 authors: [admin]
-tags: ["Conference", "RStudio", "Metropolitan Council"]
+tags: ["Conference", "RStudio", "Metropolitan Council", "industry"]
 
 # Is this a featured talk? (true/false)
 featured: true
