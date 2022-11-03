@@ -2,6 +2,7 @@
 title: "{streetlightR}"
 author: Liz Roten
 date: '2022-11-03'
+draft: false
 slug: streetlightr
 categories: []
 tags:
@@ -12,8 +13,6 @@ tags:
 - transportation
 - GitHub Actions
 - StreetLight Data
-
-
 summary: "Interact with StreetLight Data's API in R"
 authors: []
 external_link: ''
@@ -37,7 +36,7 @@ url_video: ''
 slides: ''
 ---
 
-```{r, eval = TRUE, results='asis'}
+```{r, echo = FALSE,  eval = TRUE, results='asis'}
 readme_lines <- readLines("https://raw.githubusercontent.com/Metropolitan-Council/streetlightR/main/README.Rmd")[8:33]
 cat(readme_lines,sep = "\n")
 ```
