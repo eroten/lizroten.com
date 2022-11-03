@@ -1,0 +1,46 @@
+---
+title: "{streetlightR}"
+author: Liz Roten
+date: '2022-11-03'
+slug: streetlightr
+categories: []
+tags:
+- Metropolitan Council
+- package
+- github
+- pkgdown
+- transportation
+- GitHub Actions
+- StreetLight Data
+
+
+summary: "Interact with StreetLight Data's API in R"
+authors: []
+external_link: ''
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+links:
+  - icon: file
+    icon_pack: fa
+    name: Documentation
+    url: 'https://metropolitan-council.github.io/streetlightR/'
+  - icon: github
+    icon_pack: fab
+    name: Code
+    url: 'url: https://github.com/Metropolitan-Council/streetlightR'
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+slides: ''
+---
+
+```{r, eval = TRUE, results='asis'}
+readme_lines <- readLines("https://raw.githubusercontent.com/Metropolitan-Council/streetlightR/main/README.Rmd")[8:33]
+cat(readme_lines,sep = "\n")
+```
+
+
+
