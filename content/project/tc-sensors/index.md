@@ -14,14 +14,14 @@ date: "2021-02-05T00:00:00Z"
 external_link: ""
 
 image:
-  # caption: Photo by rawpixel on Unsplash
-  focal_point: Smart
+  caption: tc.sensors hex logo
+  # focal_point: Smart
 
 links:
 - icon: github
   icon_pack: fab
   name: Code
-  url: https://github.com/Metropolitan-Council/tc.sensors
+  url: https://github.com/metropolitan-council/tc.sensors
 - icon: file
   icon_pack: fa
   name: Documentation
