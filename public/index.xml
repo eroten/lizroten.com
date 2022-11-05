@@ -13,6 +13,59 @@
     </image>
     
     <item>
+      <title>Leveraging vector processing with R to analyze StreetLight Data</title>
+      <link>https://lizroten.com/talk/leveraging-streelightr-api-r/</link>
+      <pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/leveraging-streelightr-api-r/</guid>
+      <description>&lt;p&gt;Introducing &lt;code&gt;{streetlightR}&lt;/code&gt;, an R wrapper for the StreetLight InSight® API. I highlight two case studies where we used vector processing to complete thousands of StreetLight analyses and compile the metrics into granular and meaningful results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>{streetlightR}</title>
+      <link>https://lizroten.com/project/streetlightr/</link>
+      <pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/streetlightr/</guid>
+      <description>&lt;h1 id=&#34;streetlightr&#34;&gt;streetlightR&lt;/h1&gt;
+&lt;!-- badges: start --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Metropolitan-Council/streetlightR/actions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/Metropolitan-Council/streetlightR/workflows/R-CMD-check/badge.svg&#34; alt=&#34;R build status&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;!-- badges: end --&gt;  
+&lt;p&gt;streetlightR is an R wrapper for &lt;a href=&#34;https://www.streetlightdata.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StreetLight Data&amp;rsquo;s&lt;/a&gt; InSight® API that makes it easier for users to create analyses, upload zone sets, fetch results, and more.&lt;/p&gt;
+&lt;p&gt;To get a sense for what you can do with this package, see our &lt;a href=&#34;https://github.com/Metropolitan-Council/streetlightR/blob/main/inst/2022.11-StL-API.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presentation&lt;/a&gt; to the StreetLight API users group in November 2022.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;remotes::install_github(&amp;quot;Metropolitan-Council/streetlightR&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;streetlight-api&#34;&gt;StreetLight API&lt;/h2&gt;
+&lt;p&gt;StreetLight Data offers a limited-feature API for subscribers. Contact StreetLight &lt;a href=&#34;mailto:support@streetlightdata.com&#34;&gt;support&lt;/a&gt; to request an API key and documentation access.&lt;/p&gt;
+&lt;h3 id=&#34;api-key-management&#34;&gt;API key management&lt;/h3&gt;
+&lt;p&gt;Contact StreetLight Data support to request an API key. Then, use &lt;code&gt;streetlight_api_key()&lt;/code&gt; to save the key for future use.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;library(streetlightR)
+streetlight_api_key(key = &amp;quot;9999999&amp;quot;, install = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Oddly Satisfying</title>
       <link>https://lizroten.com/oddly/</link>
       <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>

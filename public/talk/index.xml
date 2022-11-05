@@ -13,6 +13,15 @@
     </image>
     
     <item>
+      <title>Leveraging vector processing with R to analyze StreetLight Data</title>
+      <link>https://lizroten.com/talk/leveraging-streelightr-api-r/</link>
+      <pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/talk/leveraging-streelightr-api-r/</guid>
+      <description>&lt;p&gt;Introducing &lt;code&gt;{streetlightR}&lt;/code&gt;, an R wrapper for the StreetLight InSight® API. I highlight two case studies where we used vector processing to complete thousands of StreetLight analyses and compile the metrics into granular and meaningful results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Oddly Satisfying</title>
       <link>https://lizroten.com/oddly/</link>
       <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>

@@ -346,7 +346,7 @@
   
   <meta property="og:site_name" content="Liz Roten" />
   <meta property="og:url" content="https://lizroten.com/project/streetlightr/" />
-  <meta property="og:title" content="Liz Roten" />
+  <meta property="og:title" content="{streetlightR} | Liz Roten" />
   <meta property="og:description" content="Interact with StreetLight Data&#39;s API in R" /><meta property="og:image" content="https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -356,7 +356,7 @@
         content="2022-11-03T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-11-03T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2022-11-03T15:48:42-05:00">
   
 
   
@@ -380,10 +380,10 @@
     "@type": "WebPage",
     "@id": "https://lizroten.com/project/streetlightr/"
   },
-  "headline": "",
+  "headline": "{streetlightR}",
   
   "datePublished": "2022-11-03T00:00:00Z",
-  "dateModified": "2022-11-03T00:00:00Z",
+  "dateModified": "2022-11-03T15:48:42-05:00",
   
   "author": {
     "@type": "Person",
@@ -419,11 +419,11 @@
 
 
 
-  <title>Liz Roten</title>
+  <title>{streetlightR} | Liz Roten</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5620de4c8fdeeb429c58ab6375f88d34" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="85f9ff44d4d229295bba2e15fbbcce43" >
 
   
   
@@ -719,7 +719,7 @@
   
   
 <div class="article-container pt-3">
-  <h1></h1>
+  <h1>{streetlightR}</h1>
 
   
 
@@ -735,6 +735,7 @@
   <span class="article-date">
     
     
+      
       
     
     November 3, 2022
@@ -824,7 +825,43 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <h1 id="streetlightr">streetlightR</h1>
+<!-- badges: start -->
+<p><a href="https://github.com/Metropolitan-Council/streetlightR/actions" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/Metropolitan-Council/streetlightR/workflows/R-CMD-check/badge.svg" alt="R build status" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</a></p>
+<!-- badges: end -->  
+<p>streetlightR is an R wrapper for <a href="https://www.streetlightdata.com/" target="_blank" rel="noopener">StreetLight Data&rsquo;s</a> InSight® API that makes it easier for users to create analyses, upload zone sets, fetch results, and more.</p>
+<p>To get a sense for what you can do with this package, see our <a href="https://github.com/Metropolitan-Council/streetlightR/blob/main/inst/2022.11-StL-API.pdf" target="_blank" rel="noopener">presentation</a> to the StreetLight API users group in November 2022.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-{r}">remotes::install_github(&quot;Metropolitan-Council/streetlightR&quot;)
+</code></pre>
+<h2 id="streetlight-api">StreetLight API</h2>
+<p>StreetLight Data offers a limited-feature API for subscribers. Contact StreetLight <a href="mailto:support@streetlightdata.com">support</a> to request an API key and documentation access.</p>
+<h3 id="api-key-management">API key management</h3>
+<p>Contact StreetLight Data support to request an API key. Then, use <code>streetlight_api_key()</code> to save the key for future use.</p>
+<pre><code class="language-{r}">library(streetlightR)
+streetlight_api_key(key = &quot;9999999&quot;, install = TRUE)
+</code></pre>
+
     </div>
 
     
@@ -838,7 +875,7 @@
   
   <a class="badge badge-light" href="/tag/metropolitan-council/">Metropolitan Council</a>
   
-  <a class="badge badge-light" href="/tag/packages/">packages</a>
+  <a class="badge badge-light" href="/tag/package/">package</a>
   
   <a class="badge badge-light" href="/tag/github/">github</a>
   
@@ -847,6 +884,8 @@
   <a class="badge badge-light" href="/tag/transportation/">transportation</a>
   
   <a class="badge badge-light" href="/tag/github-actions/">GitHub Actions</a>
+  
+  <a class="badge badge-light" href="/tag/streetlight-data/">StreetLight Data</a>
   
 </div>
 
@@ -863,7 +902,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://lizroten.com/project/streetlightr/&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://lizroten.com/project/streetlightr/&amp;text=%7bstreetlightR%7d" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -876,7 +915,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://lizroten.com/project/streetlightr/&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://lizroten.com/project/streetlightr/&amp;t=%7bstreetlightR%7d" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -889,7 +928,7 @@
       
       
       <li>
-        <a href="mailto:?subject=&amp;body=https://lizroten.com/project/streetlightr/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=%7bstreetlightR%7d&amp;body=https://lizroten.com/project/streetlightr/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -902,7 +941,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://lizroten.com/project/streetlightr/&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https://lizroten.com/project/streetlightr/&amp;title=%7bstreetlightR%7d" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1105,6 +1144,13 @@
   
 
   
+ 
+  <script>
+  $(document).ready(function () {
+    window.initializeCodeFolding("show" === "hide");
+  });
+  </script>
+  <script src="/js/codefolding.js"></script>
 
 
 
