@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quarto | Liz Roten</title>
+    <link>https://lizroten.com/tag/quarto/</link>
+      <atom:link href="https://lizroten.com/tag/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <description>quarto</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2023</copyright><lastBuildDate>Fri, 19 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
+      <title>quarto</title>
+      <link>https://lizroten.com/tag/quarto/</link>
+    </image>
+    
+    <item>
+      <title>Transportation System Performance Evaluation (TSPE)</title>
+      <link>https://lizroten.com/project/tspe/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/project/tspe/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;The Transportation System Performance Evaluation is a comprehensive review of the Twin Cities transportation system. It is required by state law to be completed before every Transportation Policy Plan (TPP) update.&lt;/p&gt;
+&lt;p&gt;The TSPE contains data from a variety of sources, including demographic context from the US Census, comparisons to peer regions from national data sources, data from local agencies and researchers, and travel data from the Council’s Travel Behavior Inventory.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All figures and tables are indexed and hyperlinked in Appendix&lt;/li&gt;
+&lt;li&gt;All plotly figures are available for high-resolution PDF download&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This report is a comprehensive review of the Twin Cities transportation system as prepared by Metropolitan Council in 2023. The Minnesota State Legislature adopted statutes in 1996 requiring the Metropolitan Council to produce this report (previously called the Transportation System Audit). This report was prepared to inform the 2024 update to the region’s long-range transportation plan, the 2050 Transportation Policy Plan (2050 TPP).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-tspe&#34; href=&#34;https://lizroten.com/media/albums/tspe/layout.png&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/tspe/layout_hu04595687d392f1619827101d3a3a8d0b_391853_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;layout.png&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-tspe&#34; href=&#34;https://lizroten.com/media/albums/tspe/single-page.png&#34; &gt;
+      &lt;img src=&#34;https://lizroten.com/media/albums/tspe/single-page_hu04595687d392f1619827101d3a3a8d0b_453460_0x190_resize_q75_h2_lanczos_3.webp&#34; loading=&#34;lazy&#34; alt=&#34;single-page.png&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
