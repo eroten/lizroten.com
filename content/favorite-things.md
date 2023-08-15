@@ -10,14 +10,12 @@ Congrats! You found my stash of favorite internet things. Mostly sfw. Enjoy!
 {{< tweet user="cassidoo" id="1275605680242610177" >}}
 
 
-Toddler v.s. Husky  
-
-{{< tweet user="Lisa_Bizzle" id="1193220924327288834" >}}  
-
-
-
 
 ## Videos  
+
+an evening conversation
+
+{{< youtube FjbEGUTeVnM >}}
 
 
 Taylor Swift + Goats  
