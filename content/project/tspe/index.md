@@ -28,6 +28,10 @@ links:
   icon_pack: fa
   name: Live Quarto Book
   url: https://metrocouncil.org/METC/media/TSPE/index.html
+- icon: file-powerpoint
+  icon_pack: fa
+  name: Presentation
+  url: https://metrocouncil.org/Council-Meetings/Committees/Transportation-Advisory-Board-TAB/2023/August-16,-2023/Info-1-TSPE.aspx
 # - icon: github
 #   icon_pack: fab
 #   name: Code
