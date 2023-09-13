@@ -4,3 +4,6 @@
 [submodule "static/cv"]
 	path = static/cv
 	url = https://github.com/eroten/cv.git
+[submodule "static/slides/positconf23"]
+	path = static/slides/positconf23
+	url = git@github.com:eroten/positconf23.git
