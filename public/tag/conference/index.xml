@@ -5,12 +5,23 @@
     <link>https://lizroten.com/tag/conference/</link>
       <atom:link href="https://lizroten.com/tag/conference/index.xml" rel="self" type="application/rss+xml" />
     <description>Conference</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2023</copyright><lastBuildDate>Wed, 27 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2023</copyright><lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
       <title>Conference</title>
       <link>https://lizroten.com/tag/conference/</link>
     </image>
+    
+    <item>
+      <title>The &#39;I&#39; in Team</title>
+      <link>https://lizroten.com/team/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://lizroten.com/team/</guid>
+      <description>&lt;p&gt;R users don&amp;rsquo;t always come in sets. Often, you may be the only user on in the cubicle-block. But, one miraculous day, your manager finally fills the void and you welcome more folks on your team. Suddenly, the little R system you created to suit your needs, like a custom package, code styling, and file organization, isn&amp;rsquo;t just for you.&lt;/p&gt;
+&lt;p&gt;Want to suddenly overhaul that one package you wrote two years ago? It probably won&amp;rsquo;t work when your colleagues try to update it. Your new teammates are data.table fans, but you prefer the tidyverse. Do you need to refactor? Are style choices, like indentation important when collaborating, or are you just being persnickety?&lt;/p&gt;
+&lt;p&gt;In this talk, you will learn how to bring new teammates on board and blend your respective styles without pulling your hair out.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Oddly Satisfying</title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>industry | Liz Roten</title>
-    <link>https://lizroten.com/tag/industry/</link>
-      <atom:link href="https://lizroten.com/tag/industry/index.xml" rel="self" type="application/rss+xml" />
-    <description>industry</description>
+    <title>Posit | Liz Roten</title>
+    <link>https://lizroten.com/tag/posit/</link>
+      <atom:link href="https://lizroten.com/tag/posit/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posit</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Liz Roten 2023</copyright><lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lizroten.com/media/icon_hu9684a0c7728a1791553eb63a20e70951_11434_512x512_fill_lanczos_center_3.png</url>
-      <title>industry</title>
-      <link>https://lizroten.com/tag/industry/</link>
+      <title>Posit</title>
+      <link>https://lizroten.com/tag/posit/</link>
     </image>
     
     <item>
@@ -20,15 +20,6 @@
       <description>&lt;p&gt;R users don&amp;rsquo;t always come in sets. Often, you may be the only user on in the cubicle-block. But, one miraculous day, your manager finally fills the void and you welcome more folks on your team. Suddenly, the little R system you created to suit your needs, like a custom package, code styling, and file organization, isn&amp;rsquo;t just for you.&lt;/p&gt;
 &lt;p&gt;Want to suddenly overhaul that one package you wrote two years ago? It probably won&amp;rsquo;t work when your colleagues try to update it. Your new teammates are data.table fans, but you prefer the tidyverse. Do you need to refactor? Are style choices, like indentation important when collaborating, or are you just being persnickety?&lt;/p&gt;
 &lt;p&gt;In this talk, you will learn how to bring new teammates on board and blend your respective styles without pulling your hair out.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Oddly Satisfying</title>
-      <link>https://lizroten.com/oddly/</link>
-      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://lizroten.com/oddly/</guid>
-      <description>&lt;p&gt;It happens to us all - a request to &amp;ldquo;just re-run the code&amp;rdquo; turns into a project nightmare. The materials left to you are poorly documented and scattered across Word, Excel, ArcGIS, and PDF reports. In this talk, I show you how to turn any project into a point of pride. Using a worked example, I provide guidance on how to complete a project intake, find your opportunity to shine, and how to work efficiently and reproducibly through thoughtful documentation. Finally, I cover how to set up the project for future success. Learn how to take the messy project you dread and make it inexplicably satisfying.&lt;/p&gt;
 </description>
     </item>
     
