@@ -3,7 +3,7 @@ title: The 'I' in Team
 subtitle: Peer-to-Peer Best Practices for Growing Data Science Teams
 event: Posit Conf 2023
 # event_url: https://www.rstudio.com/conference/2022/2022-conf-talks/
-date: 2023-09-17
+date: 2023-09-12
 url: "/team"
  
 summary: 'Peer-to-Peer Best Practices for Growing Data Science Teams'
@@ -37,13 +37,6 @@ links:
   name: Code
   url: https://github.com/eroten/positconf23
 # url_video: ""
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-# slides: "rstudioconf22-oddly-satisfying/slides"
 
 # Enable math on this page?
 math: false
