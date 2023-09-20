@@ -3,7 +3,7 @@ title: The 'I' in Team
 subtitle: Peer-to-peer best practices for growing data science teams
 event: Posit Conf 2023
 # event_url: https://www.rstudio.com/conference/2022/2022-conf-talks/
-date: 2023-09-12
+date: 2023-09-19
 url: "/team"
  
 summary: 'Peer-to-peer best practices for growing data science teams'
