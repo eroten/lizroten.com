@@ -73,6 +73,7 @@ Technical Skills {#skills}
 --------------------------------------------------------------------------------
 - R  
 - R Shiny
+- R package development
 - HTML/CSS  
 - Tableau  
 - Adobe Illustrator  
@@ -86,8 +87,10 @@ Technical Skills {#skills}
 Open Source Contributions {#open-source}
 --------------------------------------------------------------------------------
 
-- [`tc.sensors`](https://github.com/Metropolitan-Council/tc.sensors): R package for pulling data from thousands of traffic sensors across the metro.   
 - [`councilR`](https://github.com/Metropolitan-Council/councilR): Organization specific package for consistent style and data practices.  
+- [`streetlightR`](https://github.com/Metropolitan-Council/streetlightR): R wrapper for  StreetLight InSight® API.
+- [`covid-poops`](https://github.com/Metropolitan-Council/covid-poops): Shiny app for monitoring COVID-19 viral presence in metro wastewater.
+
 
 Main
 ================================================================================

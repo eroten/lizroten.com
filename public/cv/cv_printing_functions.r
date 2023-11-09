@@ -6,7 +6,7 @@
 #'
 #' @param data_location Path of the spreadsheets holding all your data. This can be
 #'   either a URL to a google sheet with multiple sheets containing the four
-#'   data types or a path to a folder containing four `.csv`s with the necessary
+#'   data types or a path to a folder containing four `.csv`s with the neccesary
 #'   data.
 #' @param source_location Where is the code to build your CV hosted?
 #' @param pdf_mode Is the output being rendered into a pdf? Aka do links need
@@ -37,13 +37,13 @@ create_CV_object <-  function(data_location = "data/",
       options(gargle_oauth_cache = ".secrets")
     }
 
-    read_gsheet <- function(sheet_id){
-      googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
-    }
-    cv$entries_data  <- read_gsheet(sheet_id = "entries")
-    cv$skills        <- read_gsheet(sheet_id = "language_skills")
-    cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
-    cv$contact_info  <- read_gsheet(sheet_id = "contact_info")
+    cv$entries_data <- googlesheets4::read_sheet(data_location, sheet = "entries", skip = 1) %>%
+      # Google sheets loves to turn columns into list ones if there are different types
+      dplyr::mutate_if(is.list, purrr::map_chr, as.character)
+
+    cv$skills        <- googlesheets4::read_sheet(data_location, sheet = "language_skills", skip = 1)
+    cv$text_blocks   <- googlesheets4::read_sheet(data_location, sheet = "text_blocks", skip = 1)
+    cv$contact_info  <- googlesheets4::read_sheet(data_location, sheet = "contact_info", skip = 1)
   } else {
     # Want to go old-school with csvs?
     cv$entries_data <- readr::read_csv(paste0(data_location, "entries.csv"), skip = 1)
@@ -52,6 +52,9 @@ create_CV_object <-  function(data_location = "data/",
     cv$contact_info <- readr::read_csv(paste0(data_location, "contact_info.csv"), skip = 1)
   }
 
+
+  # This year is assigned to the end date of "current" events to make sure they get sorted later.
+  future_year <- lubridate::year(lubridate::ymd(Sys.Date())) + 10
 
   extract_year <- function(dates){
     date_year <- stringr::str_extract(dates, "(20|19)[0-9]{2}")
@@ -78,23 +81,27 @@ create_CV_object <-  function(data_location = "data/",
       na.rm = TRUE
     ) %>%
     dplyr::mutate(
-      description_bullets = ifelse(description_bullets != "", paste0("- ", description_bullets), ""),
-      start = ifelse(start == "NULL", NA, start),
-      end = ifelse(end == "NULL", NA, end),
-      start_year = extract_year(start),
-      end_year = extract_year(end),
+      date_fmt = ifelse(is.na(date), NA, lubridate::mdy(date) %>%
+                          format("%B %Y")),
+      description_bullets = paste0("- ", description_bullets),
       no_start = is.na(start),
       has_start = !no_start,
       no_end = is.na(end),
       has_end = !no_end,
+      cur_end = tolower(end) %in% c("current", "now", ""),
+      end_num = ifelse (cur_end | no_end, future_year, end),
+      start_year = extract_year(start),
+      end_year = extract_year(end),
       timeline = dplyr::case_when(
+        date_fmt != "N/A" ~ date_fmt,
         no_start  & no_end  ~ "N/A",
         no_start  & has_end ~ as.character(end),
-        has_start & no_end  ~ paste("Current", "-", start),
+        has_start & no_end  ~ paste(start, "-", "Current"),
         TRUE                ~ paste(end, "-", start)
       )
     ) %>%
-    dplyr::arrange(desc(parse_dates(end))) %>%
+    dplyr::select(-no_start, -has_start, -no_end, -has_end, -cur_end) %>%
+    dplyr::arrange(desc(end_num)) %>%
     dplyr::mutate_all(~ ifelse(is.na(.), 'N/A', .))
 
   cv
@@ -197,7 +204,7 @@ print_skill_bars <- function(cv, out_of = 5, bar_color = "#969696", bar_backgrou
 >{skill}</div>"
   }
   cv$skills %>%
-    dplyr::mutate(width_percent = round(100*as.numeric(level)/out_of)) %>%
+    dplyr::mutate(width_percent = round(100*level/out_of)) %>%
     glue::glue_data(glue_template) %>%
     print()
 
