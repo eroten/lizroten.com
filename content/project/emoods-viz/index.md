@@ -4,9 +4,6 @@ summary: 'Mapping my travel patterns and mental health from 2015-2017'
 author: Liz Roten
 date: '2017-10-30'
 slug: 3-years-of-mental-health-a-quantified-self-story
-
-categories:
-  - cartography
 tags:
 - arcgis
 - ggplot2
@@ -18,7 +15,7 @@ subtitle: 'Mapping my travel patterns and mental health from 2015-2017'
 lastmod: '2021-01-24T15:10:18-06:00'
 featured: yes
 image:
-  caption: 'Liz Roten, 2021'
+  caption: 'Liz Roten, 2017'
   focal_point: Top
   preview_only: no
 # projects: ["emoods-blog-post"]
@@ -59,3 +56,6 @@ I use [eMoods](https://emoodtracker.com/) to track my mental health from day to 
 I worked with geospatial data in formats I was unfamiliar with, such as KML, JSON, and tar.gz zipped files. I also had no prior experience in Adobe Illustrator, JavaScript, HTML, and CSS. This piece not only demonstrates my skill in these areas but also my persistence and commitment to telling my story.
 
 During my Spring 2018 independent project, I also used R Shiny to take a simple, interactive look at the polar coordinate bar graphs. You can see this app on its own [here](https://eroten.shinyapps.io/independentFP) and the updated version [here](https://eroten.shinyapps.io/01_shiny/).  
+
+<p><iframe src="https://eroten.shinyapps.io/01_shiny/" width="100%" height="650" style="border-color: transparent;"></iframe><br /></p>
+
