@@ -5,6 +5,8 @@ date: "`r Sys.Date()`"
 params:
   pdf_mode:
     value: true
+  resume_mode:
+    value: false
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
@@ -26,7 +28,8 @@ source("cv_printing_functions.r")
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
   data_location = "data/",  
-  pdf_mode = params$pdf_mode
+  pdf_mode = params$pdf_mode,
+  resume = params$resume_mode
 )
 
 ```
@@ -105,13 +108,6 @@ CV %<>% print_text_block("intro")
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('education')
-```
-
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
@@ -127,7 +123,15 @@ CV %<>% print_section('industry_positions')
 ```
 
 
-Selected projects and talks{data-icon=laptop}
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+
+Select projects and talks{data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -140,7 +144,7 @@ CV %<>% print_section('projects_talks')
 <br>
 
 
-Selected Data Science Writing {data-icon=chart-line}
+Select Data Science Writing {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
 ::: aside

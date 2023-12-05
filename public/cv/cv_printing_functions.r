@@ -16,7 +16,8 @@
 #' @return A new `CV_Printer` object.
 create_CV_object <-  function(data_location = "data/",
                               pdf_mode = FALSE,
-                              sheet_is_publicly_readable = TRUE) {
+                              sheet_is_publicly_readable = TRUE,
+                              resume = FALSE) {
 
   cv <- list(
     pdf_mode = pdf_mode,
@@ -73,6 +74,12 @@ create_CV_object <-  function(data_location = "data/",
   }
 
   # Clean up entries dataframe to format we need it for printing
+  if(resume == TRUE){
+    # browser()
+    cv$entries_data %<>%
+      dplyr::filter(in_resume == TRUE)
+  }
+
   cv$entries_data %<>%
     tidyr::unite(
       tidyr::starts_with('description'),
@@ -81,7 +88,9 @@ create_CV_object <-  function(data_location = "data/",
       na.rm = TRUE
     ) %>%
     dplyr::mutate(
-      date_fmt = ifelse(is.na(date), NA, lubridate::mdy(date) %>%
+      date_fmt = ifelse(is.na(date),
+                        NA,
+                        lubridate::mdy(date) %>%
                           format("%B %Y")),
       description_bullets = paste0("- ", description_bullets),
       no_start = is.na(start),
@@ -192,7 +201,9 @@ print_text_block <- function(cv, label){
 
 #' @description Construct a bar chart of skills
 #' @param out_of The relative maximum for skills. Used to set what a fully filled in skill bar is.
-print_skill_bars <- function(cv, out_of = 5, bar_color = "#969696", bar_background = "#d9d9d9", glue_template = "default"){
+print_skill_bars <- function(cv, out_of = 5, bar_color = "#969696",
+                             bar_background = "#d9d9d9",
+                             glue_template = "default"){
 
   if(glue_template == "default"){
     glue_template <- "
