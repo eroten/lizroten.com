@@ -1,5 +1,5 @@
 ---
-title: "Liz Roten's CV"
+title: "`r paste0('Liz Roten ', ifelse(params$resume_mode == TRUE, 'Resumé', 'CV'))`"
 author: Liz Roten
 date: "`r Sys.Date()`"
 params:
@@ -62,37 +62,48 @@ Contact {#contact}
 
 ```{r}
 CV %>% print_contact_info()
+cat("<br>")
+CV %>% print_contact_info(contact_option = "icons")
 ```
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _lizroten.com_")
+  if(params$resume_mode){
+    cat("View this resumé online with links at [_lizroten.com_](https://lizroten.com)")
+  } else {
+    cat("View this CV online with links at [_lizroten.com_](https://lizroten.com)")
+  }
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/eroten/cv/raw/main/cv.pdf)")
+  if(params$resume_mode){
+    cat("[<i class='fas fa-download'></i> Download a PDF of this resumé](https://github.com/eroten/cv/raw/main/resume.pdf)")
+  } else {
+    cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/eroten/cv/raw/main/cv.pdf)")
+  }
 }
 ```
 
-Technical Skills {#skills}
+Key Skills {#skills}
 --------------------------------------------------------------------------------
 - R  
 - R Shiny
 - R package development
-- HTML/CSS  
+- HTML/CSS, JavaScript  
 - Tableau  
 - Adobe Illustrator  
 - VS Code  
 - JavaScript  
 - Git/GitHub  
 - ESRI Products  
+- Project management  
 
 
 
 Open Source Contributions {#open-source}
 --------------------------------------------------------------------------------
 
-- [`councilR`](https://github.com/Metropolitan-Council/councilR): Organization specific package for consistent style and data practices.  
-- [`streetlightR`](https://github.com/Metropolitan-Council/streetlightR): R wrapper for  StreetLight InSight® API.
-- [`covid-poops`](https://github.com/Metropolitan-Council/covid-poops): Shiny app for monitoring COVID-19 viral presence in metro wastewater.
+- [`councilR`](https://github.com/Metropolitan-Council/councilR) Organization specific package for consistent style and data practices.  
+- [`streetlightR`](https://github.com/Metropolitan-Council/streetlightR) R wrapper for  StreetLight InSight® API.
+- [`covid-poops`](https://github.com/Metropolitan-Council/covid-poops) Shiny app for monitoring COVID-19 viral presence in metro wastewater.
 
 
 Main
@@ -105,8 +116,6 @@ Liz Roten {#title}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
-
-
 
 
 Experience {data-icon=suitcase}
@@ -138,12 +147,7 @@ Select projects and talks{data-icon=laptop}
 CV %<>% print_section('projects_talks')
 ```
 
-<!-- These breaks just force a new page so section doesn't get cut off -->
-<br>
-<br>
-<br>
-
-
+\newpage
 Select Data Science Writing {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
@@ -157,8 +161,16 @@ CV %<>% print_text_block('data_science_writing_aside')
 CV %<>% print_section('data_science_writings')
 ```
 
+\newpage
+Awards {data-icon=trophy}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('awards')
+```
 
+<!-- print links -->
+::: aside
 ```{r}
 CV %<>% print_links()
 ```
-
+:::

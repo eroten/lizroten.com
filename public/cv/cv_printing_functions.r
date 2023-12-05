@@ -119,29 +119,31 @@ create_CV_object <-  function(data_location = "data/",
 
 # Remove links from a text block and add to internal list
 sanitize_links <- function(cv, text){
-  if(cv$pdf_mode){
-    link_titles <- stringr::str_extract_all(text, '(?<=\\[).+?(?=\\])')[[1]]
-    link_destinations <- stringr::str_extract_all(text, '(?<=\\().+?(?=\\))')[[1]]
+  # no longer neccessary, since PDFs can access hyperlinks
 
-    n_links <- length(cv$links)
-    n_new_links <- length(link_titles)
-
-    if(n_new_links > 0){
-      # add links to links array
-      cv$links <- c(cv$links, link_destinations)
-
-      # Build map of link destination to superscript
-      link_superscript_mappings <- purrr::set_names(
-        paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
-        paste0("(", link_destinations, ")")
-      )
-
-      # Replace the link destination and remove square brackets for title
-      text <- text %>%
-        stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
-        stringr::str_replace_all('\\[(.+?)\\]', "\\1")
-    }
-  }
+  # if(cv$pdf_mode){
+  #   link_titles <- stringr::str_extract_all(text, '(?<=\\[).+?(?=\\])')[[1]]
+  #   link_destinations <- stringr::str_extract_all(text, '(?<=\\().+?(?=\\))')[[1]]
+  #
+  #   n_links <- length(cv$links)
+  #   n_new_links <- length(link_titles)
+  #
+  #   if(n_new_links > 0){
+  #     # add links to links array
+  #     cv$links <- c(cv$links, link_destinations)
+  #
+  #     # Build map of link destination to superscript
+  #     link_superscript_mappings <- purrr::set_names(
+  #       paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
+  #       paste0("(", link_destinations, ")")
+  #     )
+  #
+  #     # Replace the link destination and remove square brackets for title
+  #     text <- text %>%
+  #       stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
+  #       stringr::str_replace_all('\\[(.+?)\\]', "\\1")
+  #   }
+  # }
 
   list(cv = cv, text = text)
 }
@@ -187,7 +189,8 @@ print_section <- function(cv, section_id, glue_template = "default"){
 #' @description Prints out text block identified by a given label.
 #' @param label ID of the text block to print as encoded in `label` column of `text_blocks` table.
 print_text_block <- function(cv, label){
-  text_block <- dplyr::filter(cv$text_blocks, loc == label) %>%
+  text_block <- cv$text_blocks %>%
+    dplyr::filter(loc == label) %>%
     dplyr::pull(text)
 
   strip_res <- sanitize_links(cv, text_block)
@@ -229,7 +232,6 @@ print_links <- function(cv) {
   n_links <- length(cv$links)
   if (n_links > 0) {
     cat("
-Links {data-icon=link}
 --------------------------------------------------------------------------------
 
 <br>
@@ -248,11 +250,29 @@ Links {data-icon=link}
 
 
 #' @description Contact information section with icons
-print_contact_info <- function(cv){
-  glue::glue_data(
-    cv$contact_info,
-    "- <i class='fa fa-{icon}'></i> {contact}"
-  ) %>% print()
+print_contact_info <- function(cv, contact_option = "full"){
 
-  invisible(cv)
+  if(contact_option == "full"){
+    glue::glue_data(
+      cv$contact_info %>%
+        dplyr::filter(loc %in% c("website", "email")),
+      "- <i class='fa fa-{icon}'></i> {contact}"
+    ) %>%
+      print()
+    invisible(cv)
+
+  }
+  else {
+    cat(
+      "<div style='text-align: center; align-content: center; display: flow; font-size: 1rem;'>",
+      glue::glue_data(
+        cv$contact_info %>%
+          dplyr::filter(! loc %in% c("website", "email")),
+        "<a href='{link}' target='_blank'><i class='fa fa-{icon}'></i></a>"
+      ) %>%
+        glue::glue_collapse(sep = "&nbsp;&nbsp;"),
+      "</div>")
+
+    invisible(cv)
+  }
 }

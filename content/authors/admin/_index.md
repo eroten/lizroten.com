@@ -72,7 +72,7 @@ I am a highly motivated data scientist and cartographer with a passion for data 
 
 Behind the plots and maps, I’ve successfully built organization-specific R packages for processing gigabytes of information quickly, managing consistent visual identity across products, and standardizing data cleaning practices.
 
-{{< icon name="download" pack="fas" >}} View and download my {{< staticref "cv/cv.html" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} View and download my {{< staticref "cv/resume.html" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "cv/cv.html" "newtab" >}}CV{{< /staticref >}}.
 
 
 

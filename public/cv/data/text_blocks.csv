@@ -1,4 +1,4 @@
 Id used for finding text block,Contents of text block. Supports markdown formatting.
 loc,text
 intro,I am a highly motivated data scientist and cartographer with a passion for data visualization. I make complex topics easy to understand using compelling visual design. My static and interactive visualizations are attractive and powerful tools for decision making.
-data_science_writing_aside,I blog about data science and visualization on my website [lizroten.com.](https://www.lizroten.com/post/)
+data_science_writing_aside,"I blog about data science and visualization on my website <a href=""https://lizroten.com"" target=""_blank"">lizroten.com</a>"
