@@ -28,4 +28,10 @@ image:
 projects: []
 ---
 
-A map I made during my time at Macalester College. 
+This map displays the HIV rate per 100,000 people per county, tempered by the percent Black or African American population of the total county population. The brighter red a county is, the higher HIV rate and percent Black population. Duller reds show lower percentages of black population.
+
+The Megalopolis region (East Coast) carries a significant burden; these areas are typically in closer proximity to specialized healthcare facilities.
+
+Bright red counties indicate areas with both high African American percent of total population and high HIV rates. Counties with Black population percentage over 80% are outlined in gray.
+
+Note: AIDSVU 2014, US Census Bureau 2010 Elizabeth Roten, 9 November 2017 NAD83 Contiguous USA Albers Equal Area Conic
