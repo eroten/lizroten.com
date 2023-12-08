@@ -30,7 +30,7 @@ links:
   icon_pack: fab
   name: Code
   url: https://github.com/Metropolitan-Council/covid-poops
-- icon: file
+- icon: newspaper
   icon_pack: fa
   name: metrocouncil.org
   url: https://metrocouncil.org/Wastewater-Water/Services/Wastewater-Treatment/COVID19-Research.aspx
