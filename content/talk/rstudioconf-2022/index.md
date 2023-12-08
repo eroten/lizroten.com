@@ -73,4 +73,6 @@ math: false
 
 It happens to us all - a request to "just re-run the code" turns into a project nightmare. The materials left to you are poorly documented and scattered across Word, Excel, ArcGIS, and PDF reports. In this talk, I show you how to turn any project into a point of pride. Using a worked example, I provide guidance on how to complete a project intake, find your opportunity to shine, and how to work efficiently and reproducibly through thoughtful documentation. Finally, I cover how to set up the project for future success. Learn how to take the messy project you dread and make it inexplicably satisfying.
 
-<iframe width="100%" height="406" src="https://www.youtube-nocookie.com/embed/OIjxtlEorYU?si=L5QZxRxpLdqEfV24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+{{< youtube OIjxtlEorYU >}}
+
