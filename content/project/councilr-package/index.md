@@ -13,8 +13,8 @@ date: "2021-02-05T00:00:00Z"
 external_link: ""
 
 image:
-  # caption: Photo by rawpixel on Unsplash
-  focal_point: Smart
+  caption: councilR hex logo
+  focal_point: smart
 
 links:
 - icon: github
