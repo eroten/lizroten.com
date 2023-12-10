@@ -70,7 +70,7 @@ highlight_name: false
 
 I am a highly motivated data scientist and cartographer with a passion for data visualization. I make complex topics easy to understand using compelling visual design. My static and interactive visualizations are attractive and powerful tools for decision making.  
 
-Behind the plots and maps, I’ve successfully built organization-specific R packages for processing gigabytes of information quickly, managing consistent visual identity across products, and standardizing data cleaning practices.
+Behind the plots and maps, I’ve successfully built R packages for processing gigabytes of information quickly, managing consistent visual identity across products, and standardizing data cleaning practices.
 
 {{< icon name="download" pack="fas" >}} View and download my {{< staticref "cv/resume.html" "newtab" >}}resumé{{< /staticref >}} or {{< staticref "cv/cv.html" "newtab" >}}CV{{< /staticref >}}.
 

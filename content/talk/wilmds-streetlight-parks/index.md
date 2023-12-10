@@ -13,13 +13,12 @@ address:
 
 # date: "2020-10-281T13:00:00Z"
 
-summary: StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks, with particuar focus on novel geospatial processing and statisitical methods. 
+summary: StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks, with particular focus on novel geospatial processing and statisitical methods. 
 abstract: "StreetLight Data provides aggregated cell phone location data for transportation research. This talk will examine how the Research Team at the Metropolitan Council is using StreetLight to analyze visitor patterns in regional parks. We will cover topics including inferring traveler demographics -- such as race, income, education, and family status -- and limitations of the data. Finally, we will explore interactive visualizations using this powerful data source."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2019-10-08"
-# date_end: "2030-06-01T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).

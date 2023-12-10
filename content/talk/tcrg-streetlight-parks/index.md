@@ -40,32 +40,18 @@ links:
   icon_pack: fa
   name: Slides
   url: slides/tcrg-streetlight-parks.pdf
-- icon: folder
-  icon_pack: fas
-  name: Project
-  url: project/como-hex-streetlight-parks
 - icon: calendar-day
   icon_pack: fa
   name: EventBrite
   url: https://www.eventbrite.com/e/tcrg-event-using-location-based-data-in-regional-parks-visitors-research-registration-60382855747#
+- icon: folder
+  icon_pack: fas
+  name: Project
+  url: project/como-hex-streetlight-parks
 url_code: ""
 # url_pdf: "slides/ampo-streetlight-ghg.pdf"
 # url_slides: "slides/ampo-streetlight-ghg/"
 url_video: ""
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-# slides: "slides/ampo-streetlight-ghg.pdf"
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-# projects: ["como-hex-streetlight-parks"]
 
 # Enable math on this page?
 math: false
