@@ -51,7 +51,6 @@ links:
   icon_pack: fas
   name: Project
   url: project/truck-corridor-study
-# url_video: ""
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

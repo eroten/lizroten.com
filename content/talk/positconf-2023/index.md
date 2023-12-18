@@ -28,6 +28,10 @@ image:
   focal_point: Smart
 
 links:
+- icon: youtube
+  icon_pack: fab
+  name: Recording
+  url: https://youtu.be/F_xng3nFnXw?si=vZmcI6aK6bF3xppJ
 - icon: file-code
   icon_pack: fa
   name: Slides
@@ -36,7 +40,6 @@ links:
   icon_pack: fab
   name: Code
   url: https://github.com/eroten/positconf23
-# url_video: ""
 
 # Enable math on this page?
 math: false
@@ -47,3 +50,6 @@ R users don't always come in sets. Often, you may be the only user on in the cub
 Want to suddenly overhaul that one package you wrote two years ago? It probably won't work when your colleagues try to update it. Your new teammates are data.table fans, but you prefer the tidyverse. Do you need to refactor? Are style choices, like indentation important when collaborating, or are you just being persnickety?
 
 In this talk, you will learn how to bring new teammates on board and blend your respective styles without pulling your hair out.
+
+
+{{< youtube F_xng3nFnXw >}}
