@@ -87,6 +87,7 @@ Key Skills {#skills}
 - R  
 - R Shiny
 - R package development
+- Quarto
 - HTML/CSS, JavaScript  
 - Tableau  
 - Adobe Illustrator  

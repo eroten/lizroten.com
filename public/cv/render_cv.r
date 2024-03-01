@@ -7,6 +7,7 @@
 
 # cv -----
 # Knit the HTML version
+# remotes::install_github("nstrayer/datadrivencv#86")
 rmarkdown::render("cv.rmd",
                   params = list(pdf_mode = FALSE),
                   output_file = "cv.html")
